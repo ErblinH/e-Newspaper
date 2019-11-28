@@ -3,24 +3,39 @@ h1,h2,h3,nav,footer{
     font-family: "Trebuchet MS", Tahoma ,sans-serif;    
     
 }
+html
+{
+    padding:0 10% ;
+    height: 100%;
+    background-color: rgb(191, 192, 186);
+}
 body{
     font-family: Georgia, Cambria, sans-serif;
-    font-size: 100%;
-    background-color: #FFFFFF;
+    font-size: 12px;
+   background-color: #ffffff;
+    height: 100%;
 }
 p{
     
-    font-size:16px;
+    font-size:12px;
     
+}
+a
+{
+    font-size: 14px;
 }
 nav{
     
     font-size:18px;
 }
-
 header
 {
-    
+    background-color: #ffffff;
+}
+header a
+{
+    color: #fcfcfc;  
+    text-decoration: none;  
 }
 nav#mainMenu
 {
@@ -40,6 +55,10 @@ nav#mainMenu ul li:last-child
     border-right:0px;
     padding-right: 7px;
 }
+nav#mainMenu a
+{
+    color: #fdfbfe;
+}
 div.logos
 {
     padding:8px;
@@ -52,18 +71,25 @@ header ul
 }
 .middle
 {
-    height:4.3em;
+    height:6.8em;
+    position: relative;
+   
 }
-.middle div
-{
+.middle div.search+div
+{   position: absolute;
+    left: 20px;
     width:70%;
-    padding:20px 30px;
+    top: 35px;
+    
 
 }
 header div div.search
-{   padding:22px 30px;
-    float:right;
+{   position: absolute;
+    top: 30px;
+    right: 20px;
     width:35%;
+    
+    
 }
 header div div input[type=submit]
 {
@@ -118,15 +144,25 @@ nav#secondaryMenu ul li
 nav#secondaryMenu ul li a
 {
     text-decoration: none;
+    color: #9c9c9c;
+}
+article
+{   
+    top: 200px;
+   margin-top: 20px;
+   
+   width: 100%;
+   
+   background-color: #ffffff;
 }
 
 footer
-{   position: absolute;
+{   position: relative;
     bottom: 0;
-    height: 350px;
+    height: 300px;
     
-    width: 100%;
     background-color: #1c1c1c;
+    color: #525252;
 }
 
 footer div.upDownFooter
@@ -137,9 +173,14 @@ footer div.upDownFooter
     right: 20px;
     left: 70px;
     width: max-content;
+    margin: auto;
     
     
     
+}
+footer h4
+{
+    color:#f8f8f8;
 }
 footer div.upDownFooter ul li
 {
@@ -150,6 +191,7 @@ footer div.upDownFooter div
     display: inline-block;
     vertical-align: text-top;  
     padding:0px 20px;
+    max-width: 20%;
 }
 footer div.upDownFooter div input
 {   
@@ -189,5 +231,34 @@ footer p#template
     position: absolute;
     right: 20px;
     bottom: 20px;
+    
+}
+footer div.quickLinks ul li
+{
+    border-bottom: 1px solid #212121;
+    padding: 3px 0;
+}
+footer div.quickLinks ul li img.arrows
+{
+    vertical-align: middle;
+    margin-right: 10px;
+}
+
+footer div.blogPosts ul li
+{
+    position: relative;
+    overflow: auto;
+   /* margin-bottom: 10px;*/
+    border-bottom: 1px solid #212121;
+    padding: 10px 0;
+}
+footer div.blogPosts ul li img
+{
+    float: left;
+    margin-right: 10px;
+}
+footer div.blogPosts ul li p
+{
+    
     
 }
