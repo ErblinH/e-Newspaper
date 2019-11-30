@@ -5,7 +5,7 @@ h1,h2,h3,nav,footer{
 }
 html
 {
-    padding:0 10% ;
+    padding:0 15% ;
     height: 100%;
     background-color: rgb(191, 192, 186);
 }
@@ -37,6 +37,10 @@ header a
     color: #fcfcfc;  
     text-decoration: none;  
 }
+header div#title p,h1
+{
+    display: inline-block;
+}
 nav#mainMenu
 {
     background-color: #2aa2d4;
@@ -63,10 +67,10 @@ div.logos
 {
     padding:8px;
 }
-header ul
+nav#mainMenu ul 
 {
     float:right;
-    margin-right:30px;
+    margin-right:15px;
     margin-top:8px; 
 }
 .middle
@@ -159,8 +163,8 @@ article
 footer
 {   position: relative;
     bottom: 0;
-    height: 300px;
-    
+    height: 340px;
+    padding:5px 20px 20px 20px;
     background-color: #1c1c1c;
     color: #525252;
 }
@@ -168,12 +172,10 @@ footer
 footer div.upDownFooter
 {  
     
-    position: absolute;
-    top: 20px;
-    right: 20px;
-    left: 70px;
-    width: max-content;
-    margin: auto;
+    position: relative;
+    width: 100%;
+    border-top: 1px solid;
+    border-bottom: 1px solid;
     
     
     
@@ -181,6 +183,13 @@ footer div.upDownFooter
 footer h4
 {
     color:#f8f8f8;
+}
+footer div.arrow 
+{
+    display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 5px;
 }
 footer div.upDownFooter ul li
 {
@@ -190,9 +199,10 @@ footer div.upDownFooter div
 {   
     display: inline-block;
     vertical-align: text-top;  
-    padding:0px 20px;
-    max-width: 20%;
+    padding:10px 20px 20px 0;
+    width: 22%;
 }
+
 footer div.upDownFooter div input
 {   
     border-radius: 5px;
@@ -200,6 +210,7 @@ footer div.upDownFooter div input
     margin-bottom: 8px;
     border-width: 0;
     background-color:#242424;
+    color: #fdfbfe;
 }
 footer div.upDownFooter div input[type=submit]
 {   
@@ -221,7 +232,7 @@ footer div.upDownFooter div textarea
 footer p#copyright
 {
     position: absolute;
-    bottom: 20px;
+    bottom: 10px;
     left: 20px;
     
 
@@ -230,7 +241,7 @@ footer p#template
 {   
     position: absolute;
     right: 20px;
-    bottom: 20px;
+    bottom: 10px;
     
 }
 footer div.quickLinks ul li
