@@ -273,3 +273,121 @@ footer div.blogPosts ul li p
     
     
 }
+/*SLIDE DISPLAY STARTS*/
+    
+    .slide-container{
+        width: 960px;
+        height: 350px;
+        margin: 0 auto;
+        overflow: hidden;
+
+    }
+
+    .image-container{
+       width: 4800px;
+        height: 350px;
+        position: relative;
+        transition: left 2s;
+        -webkit-transition: left 2s;
+        -moz-transition: left 2s;
+        -o-transition: left 2s;
+        
+
+    }
+
+    .slider-image{
+        width: 960px;
+        height: 350px;
+        float: left;
+        margin: 0px;
+        padding: 0px;
+
+    }
+
+    .button-container{
+        top: -20px;
+        position: relative;
+        float: left;
+        margin-left: 10px;
+    }
+
+    .slider-button{
+        display: inline-block;
+        height: 10px;
+        width: 10px;
+        border-radius: 5px;
+        background-color: white;
+    }
+
+
+
+    .slider-button:clicked{
+        background-color: red;
+    }
+
+    #slider-image1:target ~ .image-container{
+        left: 0px;
+    }
+
+    #slider-image2:target ~ .image-container{
+        left: -960px;
+    }
+
+    #slider-image3:target ~ .image-container{
+        left: -1920px;
+    }
+
+    #slider-image4:target ~ .image-container{
+        left: -2880px;
+    }
+
+    #slider-image5:target ~ .image-container{
+        left: -3840px;
+    }
+
+    .left{
+        left: 21%;
+        position: fixed;
+        top: 148px;
+    }
+    .right{
+            position: fixed;
+        top: 19%;
+        right: 20.5%;
+    }
+
+    .left img{
+        width: 42px;
+        height: 40px;
+    }
+
+    .right img{  
+        width: 42px;
+        height: 40px;
+        transform: rotate(180deg);
+    }
+
+    .textField {
+        position: absolute;
+        top: 215px;
+        color: white;
+        font-family: "Times New Romain";
+        text-align: left;
+        width: 480px;
+        background: #000000ad;
+        height: 135px;
+        line-height: 30px;
+        overflow: hidden;
+        left: 50%;
+    }
+
+    .textField h2{
+        margin-left: 10px;
+    }
+
+    .textField p {
+        font-size: 18px;
+        margin-left: 10px;
+    }
+
+/*SLIDE DISPLAY ENDS*/
