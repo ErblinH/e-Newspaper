@@ -10,6 +10,7 @@ html
     background-color: rgb(191, 192, 186);
 }
 
+<<<<<<< HEAD
 
 article
 {   
@@ -200,6 +201,8 @@ article
 /*ARTICLE STYLE ENDS*/
 
 
+=======
+>>>>>>> 37fb209855f93e3523de2a207008306b419aa95c
 .snowflakes
 {   z-index: 3;
     width: 0;
