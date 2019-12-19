@@ -30,6 +30,7 @@ article
         animation-duration: 4s;
         animation-timing-function: linear;
 
+<<<<<<< HEAD
         -webkit-animation:snow infinite;
         -webkit-animation-duration: 4s;
         -webkit-animation-timing-function: linear;
@@ -43,6 +44,34 @@ article
         -webkit-transform: translate(100px);
         left: 100px;
     }
+=======
+.artikulli{
+    position: relative;
+    
+    height: 175px;
+    margin: 0 auto;
+}
+
+.blini {
+    margin: 0 auto;
+}
+
+.artikulli ul li img {
+    width: 48px;
+    height: 48px;
+    margin-bottom: 21px;
+}
+
+.artikulli  ul li img, .teksti{
+    display: inline-block;
+}
+
+.teksti  p, h3{
+    font-size: 15px;
+    display: block;
+    margin-bottom: 6px;
+}
+>>>>>>> 9899f4bdd14294a76a6d46769b7b404aa5bb6b03
 
     .snowflakes:nth-child(2)
     {
