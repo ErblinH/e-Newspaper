@@ -112,7 +112,7 @@ function homeArticle(image,header1,header2,pageNumber){
 }
 
 
-function
+
 
 
 
