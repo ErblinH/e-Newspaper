@@ -5,7 +5,7 @@ h1,h2,h3,nav,footer{
 }
 html
 {
-    padding:0 15% ;
+    padding:0 13% ;
     height: 100%;
     background-color: rgb(191, 192, 186);
 }
@@ -448,3 +448,32 @@ a
     }
 
 /*FOOTER DESIGN ENDS*/
+.articleContainer2{
+    width:250px;
+}
+.articleContainer2 img{
+    width:240px;
+}
+.articleContainer2 h3{
+    height:55px;
+    overflow: hidden;
+}
+.articleContainer2 td{
+    margin-right: 20px;
+}
+#bigArticle{
+    width:70%;
+    position: relative;
+    top: 30px;
+    left: 30px;
+    margin-bottom: 50px;
+}
+#bigArticle img{
+    width:400px
+}
+table{
+    margin: auto;
+}
+section{
+    position: relative;
+}

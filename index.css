@@ -258,5 +258,12 @@
         display: flex;
         padding: 0;
     }
-
+    #secondHeader td h3{
+        height: 50px;
+        overflow: hidden;
+    } 
+    #secondSlider img{
+       width: 180px; 
+        
+    }
 /*ARTICLE STYLE ENDS*/

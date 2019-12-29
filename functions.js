@@ -2,7 +2,7 @@ function snowing(images)
 {
     document.write('<img src="images/'+images+'"  width="20px" class="snowflakes">');
 }
-function article1(image,header,header2,id){
+function article1(image,header,header2,id,pageNumber){
  
   var tr=document.getElementById("topArticles");
   var td=document.createElement('td');
@@ -27,7 +27,14 @@ function article1(image,header,header2,id){
     bigArticle.appendChild(h1);
     bigArticle.appendChild(img);
     bigArticle.appendChild(h3);
-    sportsText[Object.keys(sportsText)[id]]()
+    if(pageNumber==1){
+    sportsText[Object.keys(sportsText)[id]]()}
+    else if(pageNumber==2){
+      healthText[Object.keys(healthText)[id]]()
+    }
+    else{
+      techText[Object.keys(techText)[id]]()
+    }
     
   })
   td.appendChild(a);
@@ -37,17 +44,30 @@ function article1(image,header,header2,id){
   
 
 }
-function article2(image,header1,header2,id){
-  var tr=document.getElementById("bottomArticles");
+var nrArticles=0;
+function article2(image,header1,header2,id,pageNumber){
+  nrArticles++;
+  var tbody=document.getElementById("tablebody");
+  
+  
+  
+ if(nrArticles==4){
+    var tr=document.createElement("tr");
+    tr.setAttribute('id',"secondBottomArticles");
+  tbody.appendChild(tr);}
+  else if(nrArticles==7){var tr=document.createElement("tr");
+  tr.setAttribute('id',"thirdBottomArticles");
+  tbody.appendChild(tr);}
+  if(nrArticles<4){var tr=document.getElementById("bottomArticles")}
+  else if(nrArticles>=4 && nrArticles<7){tr=document.getElementById("secondBottomArticles")}
+  else if(nrArticles>=7){tr=document.getElementById("thirdBottomArticles")}
   var td=document.createElement('td');
   var a=document.createElement('a');
   a.setAttribute('href','#bigArticle');
   
   a.innerHTML='<div class="articleContainer2" id="'+id+'"><img src="images/'+image+'" width="250px" height="160px"><h1 class="articlesHeaders2">'+header1+'</h1><h3 class="articlesHeaders2">'+header2+'</h3></div>';
   a.addEventListener("click",function()
-  { document.getElementById("bigArticleTextContent").innerHTML="";
-  
-  
+  { document.getElementById("bigArticleTextContent").innerHTML=""; 
     var bigArticle=document.getElementById("bigArticleUpperPart")
     bigArticle.innerHTML="";
   var h1=document.createElement('h1');
@@ -58,20 +78,27 @@ function article2(image,header1,header2,id){
   h3.innerHTML=header2;
   img.setAttribute('width',"300px");
   img.setAttribute('src',"images/"+image);
-        
+    bigArticle.appendChild(img);  
     bigArticle.appendChild(h1);
-    bigArticle.appendChild(img);
     bigArticle.appendChild(h3);
-    sportsText[Object.keys(sportsText)[id]]();
+    if(pageNumber==1){
+      sportsText[Object.keys(sportsText)[id]]()}
+      else if(pageNumber==2){
+        healthText[Object.keys(healthText)[id]]()
+      }
+      else{
+        techText[Object.keys(techText)[id]]()
+      }
   })
   td.appendChild(a);
   tr.appendChild(td);
   
 
 }
-
+var nr=0
 function homeArticle(image,header1,header2,pageNumber){
-
+var button=document.getElementById("dddd");
+nr++
   var tr1=document.getElementById("topArticles");
   var tr2=document.getElementById("grayHeader");
   var tr3=document.getElementById("secondHeader");
@@ -112,7 +139,10 @@ function homeArticle(image,header1,header2,pageNumber){
 }
 
 
+function slid()
+{
 
+}
 
 
 
