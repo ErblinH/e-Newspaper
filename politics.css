@@ -5,3 +5,27 @@ article
    min-height: 100px;
    background-color: #ffffff;
 }
+div.secondArticle{
+width:30%;
+height:350px;
+overflow: hidden;
+position: relative;
+}
+div#cnt{
+    position: absolute;
+    top: 30px;
+    z-index: 0;
+    color: white;
+    font-size: medium;
+}
+div.thirdArticle{
+    width:30%;
+    height:350px;
+    overflow: hidden;
+   
+    
+    }
+div#bigArticle{
+    width: 80%;
+    height: auto;
+}
