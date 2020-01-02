@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Contact Us</title>
+</head>
+<body>
+	<form method="get" action="" id="mainForm" autocomplete="on">
+   <fieldset>
+      <legend>Contact Us</legend>
+      <table>
+         <tr>
+            <td >
+               <p>
+               <label>Name</label><br/>
+               <input type="text" name="name" id="name" class="required hilightable" placeholder="Firstname" required autofocus> 
+               </p></td>
+               <td>
+               <p>
+               <label>Lastname</label><br/>
+               <input type="text" name="lastname" id="lastname" class="required hilightable" placeholder="Lastname" required >
+               </p>  </td></tr>
+              
+               <tr>
+               	<td colspan="2">
+               <p>
+               <label>Email</label><br/>
+               <input type="email" name="email" id="email" placeholder="ex@example.com" class="required hilightable" required>
+               </p>               
+            	</td>
+         </tr>
+          <tr><td>
+               <p>
+               <label>Password</label><br/>
+               <input type="password" name="pass1" id="pass1" minlength="8" placeholder="8 characters minimum" class="required hilightable" required>
+               </p>               
+            	</td>
+         
+          <td>
+               <p>
+               <label>Confirm your password</label><br/>
+               <input type="password" name="pass2" id="pass2" placeholder="Retype your password" class="required hilightable" required>
+               </p>               
+            	</td>
+         </tr>
+         <tr>
+         	<td colspan="2">
+         		<label>Sex: 
+                <input name="sex" type="radio" id="male" value="M" checked> M
+                <input name="sex" type="radio" id="female" value="F" > F
+            </label>
+			
+         	</td>
+
+         </tr>
+         <tr>
+                	<td colspan="2">
+               <p>
+               <label>Username</label><br/>
+               <input type="username" name="username" id="username" placeholder="username" class="required hilightable" >
+               </p>               
+            	</td>
+         		</tr>
+          <tr><td colspan="2">
+               <p>
+               <label>Rate Us</label><br><br>
+               <input type="rating" name="rating" id="rating" class="hilightable" placeholder="Digit: 1 - 10" required >
+               </p>    
+               <p id="demo"></p>        
+            	</td>
+         </tr>
+         <tr>
+         	<td colspan="2">
+         		<p>
+         		   <label>How satisfied are you with our page?</label><br><br>
+                <select name="list1">
+                    <option selected>Very satisfied</option>
+                    <option>Average</option>
+                    <option>I did not enjoy it</option>
+                </select>
+            </p>
+         	</td>
+         </tr>
+         <tr>
+         	<td colspan="2">
+         		
+         		 <label>What should we change?</label><br><br>
+         		 <label>
+                <input name="chb" type="checkbox" value="1" checked> Design</label>
+           		 <br>
+            <label>	
+                <input name="chb" type="checkbox" value="2"> UX
+            </label><br>
+            <label>
+                <input name="chb" type="checkbox" value="ch3"> All of the above
+            </label>
+         		
+         	</td>
+         </tr>
+         <tr>
+         	<td >
+         		<label for="date">Submiting date:
+   					 <input type="date" name="date" min="2019-04-01">
+  			</label>
+         	</td>
+         	<td>
+         		<label>
+         			<input type="button" value="Today's date" id="nowButton" onclick="fillimi()">
+         		</label>
+         	</td>
+         </tr>
+ 
+         <tr>
+            <td colspan="2">
+               <div class="rectangle centered"> 
+
+                  <button type="button" id="valid" onclick=" myFunction() , validatePassword(), matchMethod()">Submit</button>
+                   <input type="reset" value="Clear Form" class="btn">      
+               </div>
+            </td>
+         </tr>
+         <tr>
+         	<td>
+         		<p id="text">
+         		Thank you for your time Sir </p>
+         		<label>
+         			<input type="button" value="Change the above text" id="change" onclick="replaceMethod()">
+         		</label>
+         	</td>
+         </tr>
+      </table>
+   </fieldset>
+</form>
+
+<!--Javascript-->
+<script>
+	//Perdorimi i metodes toString()
+	//Perdorimi i objektit Date
+function fillimi(){
+    document.getElementById("nowButton").addEventListener("click",printoTani,false);}
+    function printoTani(){
+    var tani=new Date();
+    window.alert("Time and date \n" +tani.toString());
+}
+//Perdorimi i metodes MAX_VALUE()
+function multiply(x, y) {
+  if (x * y > Number.MAX_VALUE) {
+    return ("Process as Infinity");
+  }
+  return (x * y);
+}
+//Perdorimi i metodes MIN_VALUE()
+function multiply2(x, y) {
+  if (x * y < Number.MIN_VALUE) {
+    return "Process as -Infinity";
+  }
+  return (x * y);
+}
+	//Perdorimi i metodes toExponential()
+function expo(x, f) {
+  return Number.parseFloat(x).toExponential(f);
+}
+//Perdorimi i metodes match() dhe modifikuesit 'g'/*
+/*function matchMethod(){
+var name = document.getElementById("name").value;
+var regex = /[A-Z]/g;
+var found = name.match(regex);
+if (found === undefined || found.length == 0) {
+    window.alert("Capitalise a letter")
+}
+}*/
+
+    function change(){
+    var name = document.getElementById("name").value;
+	var regex = /[A-Z]/g;
+	var found = name.match(regex);
+	if (found === undefined || found.length == 0) {
+    window.alert("Capitalise a letter")
+}
+}
+/*
+function regEx2(){
+
+ 
+    //var text = document.getElementById("text");
+    //var regex2 = /[Sir]/i;
+     document.getElementById("text").innerHTML = text.replace("Sir", "Madam");
+
+  } 
+}
+}
+
+
+
+	//Validimi i rangut te vlerave te fushes Rating
+	//Perdorimi  i metodes isNaN()
+function replaceMethod {
+  var str = document.getElementById("text").innerHTML; 
+  var res = str.replace("Sir", "Madam");
+  document.getElementById("text").innerHTML = res;
+}*/
+function replaceMethod(){
+    document.getElementById("change").addEventListener("click",ndrysho,false);}
+    function ndrysho(){
+      var str = document.getElementById("text").innerHTML; 
+  var res = str.replace("Sir", "Madam");
+  document.getElementById("text").innerHTML = res;
+}
+function myFunction() {
+  var x, text;
+
+  x = document.getElementById("rating").value;
+
+  if (isNaN(x) || x < 1 || x > 10) {//metoda isNaN()
+     var email = document.getElementsByName("rating")[0];
+   	email.value='';
+    email.placeholder='Invalid input.(1-10)';
+  } 
+
+}
+	//Validimi se a pershtaten password dhe confirmaton password
+  var password = document.getElementById("pass1")
+  var confirm_password = document.getElementById("pass2");
+
+function validatePassword(){
+  if(password.value != confirm_password.value) {
+    confirm_password.setCustomValidity("Passwords Don't Match");
+  } else {
+    confirm_password.setCustomValidity('');
+  }
+}
+
+password.onchange = validatePassword;
+confirm_password.onkeyup = validatePassword;
+
+/* //Validimi i fushes se zbrazet
+ function isEmpty{
+ 	var username = document.getElementById("username").value;
+ 	if(username == ""){
+ 		var user = document.getElementsByName("username")[0];
+ 		user.placeholder='Required field';
+ 	}
+
+ }*/
+</script>
+</body>
+</html>
