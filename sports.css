@@ -6,3 +6,16 @@ article
    
    background-color: #ffffff;
 }
+table{
+    width: 100%;
+}
+h3.articlesHeaders1{
+    position: absolute;
+    bottom: 40px;
+    margin: 20px;
+    color: white;
+}
+.articleContainer1{
+    position: relative;
+    width: auto;
+}

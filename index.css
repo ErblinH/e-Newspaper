@@ -118,8 +118,11 @@
         left: 50%;
     }
 
-    .captionHolder .captionText{
-        margin: 0;
+    .imageHolder .captionText{
+       position: absolute;
+       right: 100px;
+       top: 200px;
+       z-index: 2;
     }
 
     #dotsContainer{
@@ -153,6 +156,7 @@
     }
 
      .moveLeftCurrentSlide{
+         z-index:-1;
         animation-name: moveLeftCurrent;
         animation-duration: 0.5s;
         animation-timing-function: linear;
@@ -254,5 +258,12 @@
         display: flex;
         padding: 0;
     }
-
+    #secondHeader td h3{
+        height: 50px;
+        overflow: hidden;
+    } 
+    #secondSlider img{
+       width: 180px; 
+        
+    }
 /*ARTICLE STYLE ENDS*/

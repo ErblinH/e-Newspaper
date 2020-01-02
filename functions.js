@@ -2,6 +2,147 @@ function snowing(images)
 {
     document.write('<img src="images/'+images+'"  width="20px" class="snowflakes">');
 }
+function article1(image,header,header2,id,pageNumber){
+ 
+  var tr=document.getElementById("topArticles");
+  var td=document.createElement('td');
+  var a=document.createElement('a');
+  a.setAttribute('href',"#bigArticle");
+  a.innerHTML='<div class="articleContainer1" id="'+id+'"><img src="images/'+image+'" width="250px" height="160px"><h3 class="articlesHeaders1">'+header+'</h3></div>';
+  td.addEventListener("click",function()
+  { document.getElementById("bigArticleTextContent").innerHTML="";
+  
+  
+    var bigArticle=document.getElementById("bigArticleUpperPart")
+    bigArticle.innerHTML="";
+  var h1=document.createElement('h1');
+  var h3=document.createElement('h3');
+  var img=document.createElement('img');
+  h1.innerHTML=header;
+  
+  h3.innerHTML=header2;
+  img.setAttribute('width',"300px");
+  img.setAttribute('src',"images/"+image);
+        
+    bigArticle.appendChild(h1);
+    bigArticle.appendChild(img);
+    bigArticle.appendChild(h3);
+    if(pageNumber==1){
+    sportsText[Object.keys(sportsText)[id]]()}
+    else if(pageNumber==2){
+      healthText[Object.keys(healthText)[id]]()
+    }
+    else{
+      techText[Object.keys(techText)[id]]()
+    }
+    
+  })
+  td.appendChild(a);
+  tr.appendChild(td);
+  
+  
+  
+
+}
+var nrArticles=0;
+function article2(image,header1,header2,id,pageNumber){
+  nrArticles++;
+  var tbody=document.getElementById("tablebody");
+  
+  
+  
+ if(nrArticles==4){
+    var tr=document.createElement("tr");
+    tr.setAttribute('id',"secondBottomArticles");
+  tbody.appendChild(tr);}
+  else if(nrArticles==7){var tr=document.createElement("tr");
+  tr.setAttribute('id',"thirdBottomArticles");
+  tbody.appendChild(tr);}
+  if(nrArticles<4){var tr=document.getElementById("bottomArticles")}
+  else if(nrArticles>=4 && nrArticles<7){tr=document.getElementById("secondBottomArticles")}
+  else if(nrArticles>=7){tr=document.getElementById("thirdBottomArticles")}
+  var td=document.createElement('td');
+  var a=document.createElement('a');
+  a.setAttribute('href','#bigArticle');
+  
+  a.innerHTML='<div class="articleContainer2" id="'+id+'"><img src="images/'+image+'" width="250px" height="160px"><h1 class="articlesHeaders2">'+header1+'</h1><h3 class="articlesHeaders2">'+header2+'</h3></div>';
+  a.addEventListener("click",function()
+  { document.getElementById("bigArticleTextContent").innerHTML=""; 
+    var bigArticle=document.getElementById("bigArticleUpperPart")
+    bigArticle.innerHTML="";
+  var h1=document.createElement('h1');
+  var h3=document.createElement('h3');
+  var img=document.createElement('img');
+  h1.innerHTML=header1;
+  
+  h3.innerHTML=header2;
+  img.setAttribute('width',"300px");
+  img.setAttribute('src',"images/"+image);
+    bigArticle.appendChild(img);  
+    bigArticle.appendChild(h1);
+    bigArticle.appendChild(h3);
+    if(pageNumber==1){
+      sportsText[Object.keys(sportsText)[id]]()}
+      else if(pageNumber==2){
+        healthText[Object.keys(healthText)[id]]()
+      }
+      else{
+        techText[Object.keys(techText)[id]]()
+      }
+  })
+  td.appendChild(a);
+  tr.appendChild(td);
+  
+
+}
+var nr=0
+function homeArticle(image,header1,header2,pageNumber){
+var button=document.getElementById("dddd");
+nr++
+  var tr1=document.getElementById("topArticles");
+  var tr2=document.getElementById("grayHeader");
+  var tr3=document.getElementById("secondHeader");
+  var tr4=document.getElementById("readMore");
+  var td1=document.createElement('td');
+  var td2=document.createElement('td');
+  var td3=document.createElement('td');
+  var td4=document.createElement('td');
+  var a=document.createElement('a');
+  var h1=document.createElement('h1');
+  var h3=document.createElement('h3');
+  var img=document.createElement('img');
+  h1.innerHTML=header1;
+  h3.innerHTML=header2;
+  img.setAttribute('width',"300px");
+  img.setAttribute('src',"images/"+image);
+  a.innerHTML="read more";
+  
+  td1.appendChild(img);
+  tr1.appendChild(td1);
+  td2.appendChild(h1);
+  tr2.appendChild(td2);
+  td3.appendChild(h3);
+  tr3.appendChild(td3);
+  td4.appendChild(a);
+  tr4.appendChild(td4);
+
+  
+  var url;
+  switch(pageNumber){
+    case 1:{url="sports.html";break;}
+    case 2:{url="health.html";break;}
+    case 3:{url="technology.html";break;}
+    default:url="#";
+
+  }
+  a.setAttribute('href',url);
+}
+
+
+function slid()
+{
+
+}
 
 
 
