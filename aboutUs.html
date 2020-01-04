@@ -2,122 +2,518 @@
 <html lang="en">
 <head>
    <meta charset="utf-8">
-   <title>EUONYMUS</title>
+   <title>big boy blini omg</title>
    <link rel="stylesheet" href="reset.css" />
-   <link rel="stylesheet" href="main.css" /> 
-   <link rel="stylesheet" href="politics.css" />   
+   <link rel="stylesheet" href="main2.css" />
+   <link rel="stylesheet" type="text/css" href="aboutUs.css"> 
+    
    
    <script src="data.js"></script>
    <script src="functions.js"></script>
    <script src="aboutUs.js"></script>
    
+
+  <!--Pjesa ku numerohen klikimet-->
+    <script type="text/javascript">
+                var counter = 0;
+
+                function click(){
+                  counter++;
+                  document.getElementById("pa").innerHTML = counter;
+                }
+                document.addEventListener("click",click);
+    </script>
+
 </head>
-<body>
+
+<body onload="startGame(), ok()">
+
+  <div id="container2">  
+    <canvas id="gameCanvas" width="70" height="70"></canvas>
+    <canvas id="gameCanvas2" width="70" height="70"></canvas>
+    <canvas id="gameCanvas3" width="70" height="70"></canvas>
+    <canvas id="gameCanvas7" width="70" height="70"></canvas>
+    <canvas id="gameCanvas8" width="70" height="70"></canvas>
+    <canvas id="gameCanvas9" width="70" height="70"></canvas>
+  </div>
+
+<div id="container3">  
+    <canvas id="gameCanvas4" width="70" height="70"></canvas>
+    <canvas id="gameCanvas5" width="70" height="70"></canvas>
+    <canvas id="gameCanvas6" width="70" height="70"></canvas>
+    <canvas id="gameCanvas10" width="70" height="70"></canvas>
+    <canvas id="gameCanvas11" width="70" height="70"></canvas>
+    <canvas id="gameCanvas12" width="70" height="70"></canvas>
+</div>
    
-   
+  <!----Pjesa e headerit fillimi--------------------------------------------------------->
+
     <header>
-        <nav id="mainMenu">
-            <ul>
-                  <li><a href="#">Sign Up</a></li>
-                  <li><a href="#">Login</a></li>
-                  <li><a href="#">RSS Feeds</a></li>
-                  <li><a href="#">Archived News</a></li>
-               </ul>
-            <div class="logos">
-                <a href="#"><img src="images/instagram.jpg"/></a>
-                <a href="#"><img src="images/instagram.jpg"/></a>
-                <a href="#"><img src="images/instagram.jpg"/></a>
-                <a href="#"><img src="images/instagram.jpg"/></a>
-                <a href="#"><img src="images/instagram.jpg"/></a>
-            </div>
-            
-        </nav>   
-        <div class="middle">
-            <div class="search">
-                  <input type="submit" value="SUBMIT"/>
-                  <input name="search" type="text" placeholder="Search Our Website"/>
-                  
-              </div>
-            <div id="title">
-               <h1>EUONYMUS</h1><p>Free PSD<br> Website Template</p>
-            </div>
-            
-        </div>
-        <nav id="secondaryMenu">
-            <ul>
-                <li><a href="index.html">HOME</a></li>
-                <li><a href="sports.html">SPORTS</a></li>
-                <li><a href="health.html">HEALTH</a></li>
-                <li><a href="technology.html">TECHNOLOGY</a></li>
-                <li><a href="aboutUs.html">ABOUT US</a></li>
-                <li><a href="#">HOME</a></li>
-                <li><a href="#">HOME</a></li>
-                 
-            </ul>
-        </nav>
-    </header>
-
-    <article>
-       
-    </article>
-    <footer>
-
-        <div align="center" id="topArrow">
-          <a href="#mainMenu"><img src="images/uparrow.png" width="40px"/></a>
-        </div>
-           
-        <div class="upDownFooter">
-             
-          <div class="companyDetails">
-            <h4>COMPANY DETAILS</h4>
-            <p>
-                Lorem ipsum dolor sit <br>amet consectetur, adipisicing elit.<br> Nemo similique reprehenderit ex <br>eveniet obcaecati<br> blanditiis recusandae<br> vitae necessitatibus,<br> aliquid nam et eius commodi<br> tempore quibusdam corrupti <br>eaque ipsum, aspernatur quas!
-            </p>
-          </div>
-    
-          <div class="blogPosts">
-            <h4>LATEST BLOG POSTS</h4>
-            <ul>
-                <li><a href=""><img src="images/vegans.jpg" width="50px" /><p>Vegans 'need to be aware of B12 deficiency risk'</p></a></li>
-                <li><a href=""><img src="images/facial.jpg" width="50px" /><p>Facial recognition fails on race, government study says</p></a></li>
-                <li><a href=""><img src="images/old.jpg" width="50px" /><p>The Older You Are, the Less Narcissistic You Tend to Be</p></a></li>
-              </ul>
-          </div>
-    
-          <div class="quickLinks">
-            <h4>QUICK LINKS</h4>
+          <nav id="mainMenu">
               <ul>
-                <li><a href="sports.html">Liverpool hopeful over Van Dijk return for Club World Cup final</a></li>
-                 <li><a href="health.html">Vegans 'need to be aware of B12 deficiency risk'</a></li>
-                  <li><a href="technology.html">Uber promises changes to avoid Germany ban</a></li>
-                  <li><a href="sports.html">Brazilian Mikaili Sol wins Kiteboarding World Championships</a></li>
-                  <li><a href="technology.html">YouTube's top earners: Eight-year-old Ryan tops list with $26m</a></li>
-              </ul>
+                    <li><a href="#">Sign Up</a></li>
+                    <li><a href="#">Login</a></li>
+                    <li><a href="#">RSS Feeds</a></li>
+                    <li><a href="#">Archived News</a></li>
+                 </ul>
+              <div class="logos">
+                  <a href="#"><img src="images/instagram.jpg"/></a>
+                  <a href="#"><img src="images/instagram.jpg"/></a>
+                  <a href="#"><img src="images/instagram.jpg"/></a>
+                  <a href="#"><img src="images/instagram.jpg"/></a>
+                  <a href="#"><img src="images/instagram.jpg"/></a>
+              </div>
+              
+          </nav>   
+          <div class="middle">
+              
+              <div class="search">
+                    <p id="pa">#clicks</p>
+                    <input type="submit" value="SUBMIT"/>
+                    <input name="search" type="text" placeholder="Search Our Website"/>
+                    
+                </div>
+
+                
+              <div id="title">
+                 <h1>EUONYMUS</h1><p>Free PSD<br> Website Template</p>
+              </div>
+              
           </div>
-                        
-          <div class="contact">
-            <h4>CONTACT US</h4>
-                <input type="text" placeholder="Name"/><br>
-                <input type="email" placeholder="Email" cols="21"/><br>
-                <textarea  rows="5"> Message</textarea><br>
-                <input type="submit" value="SUBMIT"/>
-          </div> 
+          <nav id="secondaryMenu">
+              <ul>
+                  <li><a href="index.html">HOME</a></li>
+                  <li><a href="sports.html">SPORTS</a></li>
+                  <li><a href="health.html">HEALTH</a></li>
+                  <li><a href="technology.html">TECHNOLOGY</a></li>
+                  <li><a href="aboutUs.html">ABOUT US</a></li>
+                  <li><a href="#">HOME</a></li>
+                  <li><a href="#">HOME</a></li>
+                   
+              </ul>
+          </nav>
+    </header>
+  <!----Pjesa e headerit mbaron---------------------------------------------------------->
+
+  <!----Pjesa e fotos qe rrotullohet fillimi--------------------------------------------->
+    <section>
+      <div class="container1">
+        <div id="myDiv">
+          <div id="one">
+            <figure>
+              <img src="images/foto2.jpg" alt="Fotoja mungon"><figcaption>Fig.1 - Italy.</figcaption></div>
+            </figure>  
+          <div id="two">
+              Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+              tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+              quis nostratur. Excepteur sint occaecat cupidatat non 
+              <img style="width: 50px; height:50px; float:right; margin: 5px;" src="images/foto1.jpg">
+              proident, sunt in culpa qui officia deserunt mollit anim id est laborum.Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+              tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+              quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+              consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+              cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+              proident, sunt in culpa qui officia deserunt mollit anim id est laborum.Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+              tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+              quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+              consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+              cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+              proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+
+
+          </div>
         </div>
-    
-          <p id="copyright">Copyright &copy; 2013 Domain Name-Al Rights Reserved </p>
-          <p id="template">Template by OS Templates</p>          
-      </footer>
-      <!------------------------------------------------------------------------>
-    
-      <script src="data.js" type="text/JavaScript"></script>
-    
-      <script src="functions.js" type="text/JavaScript"></script>
-    
-      <div id="geolocation">
-        <script src="index.js" type="text/JavaScript"></script>
       </div>
-    
-      <script type="text/javascript" src="main.js"></script>
-    
-    </body>
-    </html>
+    </section>
+  <!----Pjesa e fotos qe rrotullohet mbaron---------------------------------------------->
+
+  <!----Pjesa e pershkrimit te stazhit fillon-------------------------------------------->
+  <article>
+      <div class="container">
+          <div class="wrapper">
+            <img src="images/foto3.jpg">
+
+            <p>Erblin Halabaku, nje student i Shkencave Kompjuterike, Departamenti i Matematikes ne Prishtine<span id="dots">...</span>
+
+            <span id="more">
+              shteti i Kosoves. Ka synim qe te merr pjese ne <abbr title="Innovation Center of Kosovo"><strong><u>ICK</u></strong></abbr> <i>Prishtine</i>. 
+              <ul id="mora">
+                <li style="list-style-type:disc;">Web Programin
+                  <ul>
+                    <li style="list-style-type:square;">HTML5</li>
+                    <li style="list-style-type:square;">CSS3</li>
+                  </ul>
+                </li>
+                <li style="list-style-type:disc;">blini</li>
+              </ul>
+            </span></p>
+
+            <button onclick="myFunction()" id="myBtn">Read more</button>
+          </div>
+
+
+          <div class="wrapper">
+            <img src="images/foto3.jpg">
+
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus imperdiet, nulla et dictum interdum, nisi lorem egestas vitae scel<span id="dots2">...</span>
+
+            <span id="more2">
+              erisque 
+              
+            ae dui eget tellus gravida venenatis. Integer fringilla congue eros non fermentum. Sed dapibus pulvinar nibh tempor porta.
+            <br>Ka njohuri te mira ne <br>
+              <ol id="mora2">
+                <li>HTML</li>
+                <li>CSS</li>
+              </ol>
+          </span></p>
+
+            <button onclick="myFunction2()" id="myBtn2">Read more</button>
+          </div>
+
+          <div class="wrapper">
+            <img src="images/foto3.jpg">
+
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus imperdiet, nulla et dictum interdum, nisi lorem egestas vitae scel<span id="dots3">...</span>
+
+            <span id="more3">erisque enim ligula venenatis dolor. Maecenas nisl est, ultrices nec congue eget, auctor vitae massa. Fusce luctus vestibulum augue ut aliquet.
+
+              <dl id="mora3">
+                <dt>Njohurit</dt>
+                <dd>HTML</dd>
+                <dd>CSS3</dd>
+              </dl>
+
+            </span></p>
+
+            <button onclick="myFunction3()" id="myBtn3">Read more</button>
+          </div>
+      </div>
+
+      <address>
+        Written by <a href="mailto:erblin.halabaku@gmail.com"><mark>Erblin Halabaku</mark></a>.<br> 
+        Visit us at:<br>
+        Konvikti I
+      </address>
+  </article>
+
+
+      <script>
+          function myFunction() {
+            var dots = document.getElementById("dots");
+            var moreText = document.getElementById("more");
+            var btnText = document.getElementById("myBtn");
+            var ulText = document.getElementById("mora");
+
+            if (dots.style.display === "none") {
+              dots.style.display = "inline";
+              btnText.innerHTML = "Read more"; 
+              moreText.style.display = "none";
+              ulText.style.display = "none";
+            } else {
+              dots.style.display = "none";
+              btnText.innerHTML = "Read less"; 
+              moreText.style.display = "inline";
+              ulText.style.display = "inline";
+            }
+          }
+
+          function myFunction2() {
+            var dots = document.getElementById("dots2");
+            var moreText = document.getElementById("more2");
+            var btnText = document.getElementById("myBtn2");
+            var ulText = document.getElementById("mora2");
+
+            if (dots.style.display === "none") {
+              dots.style.display = "inline";
+              btnText.innerHTML = "Read more"; 
+              moreText.style.display = "none";
+              ulText.style.display = "none";
+            } else {
+              dots.style.display = "none";
+              btnText.innerHTML = "Read less"; 
+              moreText.style.display = "inline";
+              ulText.style.display = "inline";
+            }
+          }
+
+          function myFunction3() {
+            var dots = document.getElementById("dots3");
+            var moreText = document.getElementById("more3");
+            var btnText = document.getElementById("myBtn3");
+            var ulText = document.getElementById("mora3");
+
+            if (dots.style.display === "none") {
+              dots.style.display = "inline";
+              btnText.innerHTML = "Read more"; 
+              moreText.style.display = "none";
+              ulText.style.display = "none";
+            } else {
+              dots.style.display = "none";
+              btnText.innerHTML = "Read less"; 
+              moreText.style.display = "inline";
+              ulText.style.display = "inline";
+            }
+          }
+      </script>
+  <!----Pjesa e pershkrimit te stazhit fillon-------------------------------------------->
+
+  <!----Pjesa interaktive fillon--------------------------------------------------------->
+      <div class="poshte" style="margin-top: 4%;">
+
+        <!--Loja vizatohet ketu-->
+          <canvas id="game1" style="border: 2px solid black;" ></canvas>
+
+        <!--Butoni me fillu lojen-->
+          <button onclick="start()" class="btn luaj">Fillo Lojen</button>
+
+        <!--Kanvasi ku shfaqen emrat-->
+          <canvas style="border:  1px solid black" id="kanvas3"></canvas>
+
+        <!--Kompjuteri-->
+          <div class="svg">
+
+            <svg style  = "margin-top: -16%; margin-left: 50%; ">
+              <rect x="5" y="5" rx="20" ry="20" width="220" height="240"style="fill:white;stroke:black;stroke-width:5;" />
+            </svg>
+
+            <svg style  = "margin-top: -16%; margin-left: 50%; ">
+              <rect x="25" y="25" rx="20" ry="20" width="180" height="180"style="fill:white;stroke:black;stroke-width:5;" />
+            </svg>
+
+            <svg style  = "margin-top: -2%; margin-left: 57%; ">
+              <circle cx="7" cy="7" r="7" stroke-width="4" fill="black" />
+            </svg>
+
+            <svg style  = "margin-top: -2%; margin-left: 54%; ">
+              <circle cx="7" cy="7" r="7" stroke-width="4" fill="black" />
+            </svg>
+
+            <svg style  = "margin-top: -2%; margin-left: 60%; ">
+              <circle cx="7" cy="7" r="7" stroke-width="4" fill="black" />
+            </svg>
+
+           <svg style  = "margin-top: 1%; margin-left: 48%; ">
+              <rect x="25" y="25" rx="20" ry="20" width="250" height="80"style="fill:white;stroke:black;stroke-width:5;" />
+            </svg>
+            <svg style  = "margin-top: 0%; margin-left: 57%; ">
+              <line x1="0" y1="0" x2="0" y2="40" style="stroke:black;stroke-width:7" />
+            </svg>
+          </div>
+
+        <!--Vizatohen butonat-->
+          <canvas id="btnCanvas"></canvas>
+
+        <!--Butonat-->
+          <div id="big" >
+            <div id="container">
+              <div id = "wrap" class="zhduke" >
+                <button class="btn btn1" onmousedown="levizLarte(), fitore()" onmouseup="levizjeRe(),fitore()" ontouchstart="levizLarte()">UP</button><br>
+                <button class="btn btn1" onmousedown="levizMajtas(),fitore()" onmouseup="levizjeRe(),fitore()" ontouchstart="levizMajtas()">LEFT</button><br>
+                <button class="btn btn1" onmousedown="levizDjathtas(),fitore()" onmouseup="levizjeRe(),fitore()" ontouchstart="levizDjathtas()">RIGHT</button><br>
+                <button class="btn btn1" onmousedown="levizPoshte(),fitore()" onmouseup="clevizjeRe(),fitore()" ontouchstart="levizPoshte()">DOWN</button><br>
+              </div>
+            </div>
+          </div>
+      </div>
+
+      <script type="text/javascript">
+
+            function start(){
+              document.getElementById("wrap").removeAttribute("class");
+              var person = prompt("Please enter your name", "Harry Potter");
+              localStorage.setItem("name", person);
+              sessionStorage.setItem("name", person);
+            }
+
+            function ok() {
+              var a = document.getElementById("btnCanvas");
+              var kanvas = a.getContext("2d");
+              var img = document.getElementById("foto");
+              kanvas.drawImage(img,0,0);
+            } 
+      </script>
+  <!----Pjesa interaktive mbaron--------------------------------------------------------->
+
+  <!----Pjesa e footerit fillon---------------------------------------------------------->
+    <footer>
+      <div id="topArrow"><a href="#mainMenu"><img src="images/uparrow.png" width="40px"/></a></div>
+
+      <div class="upDownFooter">
+         
+            <div class="companyDetails">
+               <h4>COMPANY DETAILS</h4>
+               <p>
+                  Lorem ipsum dolor sit <br>amet consectetur, adipisicing elit.<br> Nemo similique reprehenderit ex <br>eveniet obcaecati<br> blanditiis recusandae<br> vitae necessitatibus,<br> aliquid nam et eius commodi<br> tempore quibusdam corrupti <br>eaque ipsum, aspernatur quas!
+               </p>
+            </div>
+            <div class="blogPosts">
+                  <h4>LATEST BLOG POSTS</h4>
+                  <ul>
+                     <li><img src="images/images.jpg" width="50px" /><p>fsref</p></li>
+                     <li><img src="images/images.jpg" width="50px" /><p>rfarefsref</p></li>
+                     <li><img src="images/images.jpg" width="50px" /><p>rfarefsref</p></li>
+                  </ul>
+            </div>
+            <div class="quickLinks">
+               <h4>QUICK LINKS</h4>
+               <ul>
+                  <li><img class="arrows" src="images/arrows.png" style="vertical-align:middle;" width="5px">test</li>
+                  <li><img class="arrows" src="images/arrows.png" width="5px">test</li>
+                  <li><img class="arrows" src="images/arrows.png" width="5px">test</li>
+                  <li><img class="arrows" src="images/arrows.png" width="5px">test</li>
+                  <li><img class="arrows" src="images/arrows.png" width="5px">test</li>
+                  <li><img class="arrows" src="images/arrows.png" width="5px">test</li>
+                  <li><img class="arrows" src="images/arrows.png" width="5px">test</li>
+                  <li><img class="arrows" src="images/arrows.png" width="5px">test</li>
+               </ul>
+            </div>
+                    
+            <div class="contact">
+               <h4>CONTACT US</h4>
+               <input type="text" placeholder="Name"/><br>
+               <input type="email" placeholder="Email" cols="21"/><br>
+               <textarea  rows="5"> Message</textarea><br>
+               <input type="submit" value="SUBMIT"/>
+            </div>
+      </div>
+         <p id="copyright">Copyright &copy; 2013 Domain Name-Al Rights Reserved </p>
+         <p id="template">Template by OS Templates</p>
+    </footer>
+  <!----Pjesa e footerit mbaron---------------------------------------------------------->
+
+
+    <script type="text/javascript">
+      var a = document.getElementById("kanvas3");
+      var ctx = a.getContext("2d");
+      var grd = ctx.createLinearGradient(0, 0, 300, 0);
+      grd.addColorStop(0.5, "#C8DBF8");
+      grd.addColorStop(1, "white");
+
+
+      ctx.fillStyle = grd;
+      ctx.fillRect(0,0,a.width,a.height)
+      ctx.strokeText("Player who had played before", 15, 20);
+
+      for (i = 0; i < localStorage.length; i++)   {
+      ctx.font = "20px Arial";
+      ctx.strokeText(localStorage.getItem(localStorage.key(i)), 10, 50+30*i);
+      }
+    </script>
+    <script type="text/javascript" src="loja.js"></script>
+    <script type="text/javascript" src="main.js"></script>
+    <script type="text/javascript" src="dragging.js"></script>
+
+    <img id="foto" src="images/Star.jpg"> 
+
+  <!---Snowflake--->
+      <script type="text/javascript">
+
+        var a = document.getElementById("gameCanvas");
+        var b = document.getElementById("gameCanvas2");
+        var c = document.getElementById("gameCanvas3");
+        var d = document.getElementById("gameCanvas4");
+        var e = document.getElementById("gameCanvas5");
+        var f = document.getElementById("gameCanvas6");
+        var g = document.getElementById("gameCanvas7");
+        var h = document.getElementById("gameCanvas8");
+        var i = document.getElementById("gameCanvas9");
+        var j = document.getElementById("gameCanvas10");
+        var k = document.getElementById("gameCanvas11");
+        var l = document.getElementById("gameCanvas12");
+
+
+        function omg(p){
+
+        var colors = ["#0333FF","#15ACFF","#0B87F9","#0042B2","#0163EC"];
+
+        var canvas = p
+
+        var c = canvas.getContext("2d");
+        c.scale(0.1,0.1);
+        c.lineCap = "round";
+        c.shadowBlur=5;
+        c.lineJoin = "round";
+        c.strokeStyle = colors[Math.floor(Math.random()*colors.length)]
+        c.shadowColor = "white"
+
+        
+        function fillimi(x,y){
+          var numberOfSides = 6,
+            size = 20,
+
+            Xcenter = x,
+            Ycenter = y;
+
+          
+          //c.moveTo (Xcenter +  size * Math.cos(0), Ycenter +  size *  Math.sin(0));          
+
+          var xcor = [];
+          var ycor = [];
+            for (var i = 1; i <= numberOfSides;i += 1) {
+              xcor[i] = (Xcenter + size * Math.cos(i * 2 * Math.PI / numberOfSides))*12;
+              ycor[i] =  (Ycenter + size * Math.sin(i * 2 * Math.PI / numberOfSides))*12
+            }
+
+          c.lineWidth = "28";
+
+          var qendra = 350;
+          var blini = 50;
+
+          
+            //Vizatimi i pjeses se pjeseve qe kryqezohen
+            c.beginPath();
+            c.moveTo(xcor[3]+50,ycor[3]+50);
+            c.lineTo(xcor[6]+50,ycor[6]+50);
+            c.stroke();
+
+            c.beginPath();
+            c.moveTo(xcor[1]+50,ycor[1]+50);
+            c.lineTo(xcor[4]+50,ycor[4]+50);
+            c.stroke();
+
+            c.beginPath();
+            c.moveTo(xcor[2]+50,ycor[2]+50);
+            c.lineTo(xcor[5]+50,ycor[5]+50);
+            c.stroke();
+
+            /////////////////////////////////////// vija 1 (1 pastaj 2)
+            c.beginPath();          
+            c.moveTo(176,199);c.lineTo(276,217);c.lineTo(301,128);
+            c.stroke();
+            ///////////////////////////////////////
+            c.beginPath();
+            c.moveTo(217,274);c.lineTo(317,288);c.lineTo(342,198);
+            c.stroke();
+
+            c.translate(qendra,qendra);
+        }
+
+        fillimi(25,25);
+
+        function draw (){
+
+          c.rotate(60*Math.PI/180);
+          /////////////////////////////////////// 
+          //vija 1 paraqe kendin larte
+          c.beginPath();          
+          c.moveTo(176-350,199-350);c.lineTo(276-350,217-350);c.lineTo(301-350,128-350);
+          c.stroke(); 
+          ///////////////////////////////////////
+          //vija 2 paraqet kendin poshte
+          c.beginPath();
+          c.moveTo(217-350,274-350);c.lineTo(317-350,288-350);c.lineTo(342-350,198-350);
+          c.stroke();
+        }
+
+        for(var i =0;i<5;i++){draw();}  
+        } 
+
+        omg(a); omg(b); omg(c); omg(d); omg(f); omg(e); omg(g); omg(h); omg(i);
+        omg(j); omg(k); omg(l);
+      </script>
+  <!---Snowflake---> 
+</body>
+
+
+</html>

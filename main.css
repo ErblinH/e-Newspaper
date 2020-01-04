@@ -5,7 +5,7 @@ h1,h2,h3,nav,footer{
 }
 html
 {
-    padding:0  ;
+    padding:0 13% ;
     height: 100%;
     background-color: rgb(191, 192, 186);
     
@@ -174,6 +174,8 @@ article table {
     header
     {   
         background-color: #ffffff;
+        width: 960px;
+        margin: 0 auto;
     }
     header a
     {

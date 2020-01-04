@@ -1,14 +1,16 @@
+
 var slideIndex,slides,dots,captionText;
 function initGallery(){
     slideIndex = 0;
-    slides=document.getElementsByClassName("imageHolder");
+    slides=document.getElementsByClassName("MbajtesiImazheve");
     slides[slideIndex].style.opacity=1;
 
     captionText=document.querySelector(".captionHolder .captionText");
-    captionText.innerText=slides[slideIndex].querySelector(".captionText").innerText;
+    
+    captionText.innerText=captionText.innerText+slides[slideIndex].querySelector(".captionText").innerText;
 
     if(slides.length<2){
-        var nextPrevBtns=document.querySelector(".leftArrow,.rightArrow");
+        var nextPrevBtns=document.querySelector(".shigjetaMajtas,.shigjetaDjathtas");
         nextPrevBtns.style.display="none";
         for (i = 0; i < nextPrevBtn.length; i++) {
             nextPrevBtn[i].style.display="none";
@@ -57,7 +59,7 @@ var slideTextAnimClass;
         next = slides[n];
         current=slides[slideIndex];
         for (i = 0; i < slides.length; i++) {
-            slides[i].className = "imageHolder";
+            slides[i].className = "MbajtesiImazheve";
             slides[i].style.opacity=0;
             dots[i].classList.remove("active");
         }
@@ -65,6 +67,7 @@ var slideTextAnimClass;
         next.classList.add(moveSlideAnimClass.forNext);
         dots[n].classList.add("active");
         slideIndex=n;
+
         captionText.style.display="none";
         captionText.className="captionText "+slideTextAnimClass;
         captionText.innerText=slides[n].querySelector(".captionText").innerText;
@@ -82,7 +85,7 @@ function changeBackground(){
     var time=new Date().getHours();
     if(time>=18)
     {
-       var k= document.getElementsByTagName('html')[0];console.log(k)
+       var k= document.getElementsByTagName('html')[0];
        k.setAttribute('style','background-image:url("images/night.jpg")')
     }
     else{var k= document.getElementsByTagName('html')[0];console.log(k)

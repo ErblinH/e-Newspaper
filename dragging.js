@@ -19,7 +19,7 @@ var dragItem = document.querySelector("#wrap");
       
         initialX = e.clientX - xOffset;
         initialY = e.clientY - yOffset;
-      
+      console.log(e)
 
       if (e.target === dragItem) {
         active = true;

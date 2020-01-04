@@ -1,11 +1,11 @@
 var slideIndex2,slides2;
 function initGallery(){
     slideIndex2 = 0;
-    slides2=document.getElementsByClassName("imageHolder2");
+    slides2=document.getElementsByClassName("MbajtesiImazheve2");
     slides2[slideIndex2].style.opacity=1;
 
     if(slides2.length<2){
-        var nextPrevBtns=document.querySelector(".leftArrow2,.rightArrow2");
+        var nextPrevBtns=document.querySelector(".shigjetaMajtas,.shigjetaDjathtas");
         nextPrevBtns.style.display="none";
         for (i = 0; i < nextPrevBtn.length; i++) {
             nextPrevBtn[i].style.display="none";
@@ -44,7 +44,7 @@ function moveSlide2(n){
             next = slides2[n];
             current=slides2[slideIndex2];
             for (i = 0; i < slides2.length; i++) {
-                slides2[i].className = "imageHolder2";
+                slides2[i].className = "MbajtesiImazheve2";
                 slides2[i].style.opacity=0;
                 
             }
@@ -55,12 +55,3 @@ function moveSlide2(n){
            
         }
 }
-
-var timer=null;
-
-function setTimer(){
-    timer=setInterval(function () {
-        plusSlides2(1) ;
-    },5000);
-}
-setTimer();
