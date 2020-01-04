@@ -5,26 +5,20 @@ h1,h2,h3,nav,footer{
 }
 html
 {
-<<<<<<< HEAD
-    padding:0 15% ;
-    height: 2000px;
-=======
-    padding:0 13% ;
+    padding:0  ;
     height: 100%;
->>>>>>> 3ff83b470e19efd2ff135ef9f98b53d24e57d20f
     background-color: rgb(191, 192, 186);
+    
 }
 
 
 article
 {   
    
-   
+   width: 100%; 
    background-color: #ffffff;
 }
 
-<<<<<<< HEAD
-=======
 /*SNOW ANIMATION BEGINS*/
     .snowflakes
     {   z-index: 3;
@@ -50,32 +44,6 @@ article
         -webkit-transform: translate(100px);
         left: 100px;
     }
-.artikulli{
-    position: relative;
-    
-    height: 175px;
-    margin: 0 auto;
-}
-
-.blini {
-    margin: 0 auto;
-}
-
-.artikulli ul li img {
-    width: 48px;
-    height: 48px;
-    margin-bottom: 21px;
-}
-
-.artikulli  ul li img, .teksti{
-    display: inline-block;
-}
-
-.teksti  p, h3{
-    font-size: 15px;
-    display: block;
-    margin-bottom: 6px;
-}
 
     .snowflakes:nth-child(2)
     {
@@ -175,15 +143,14 @@ article
 
         100%{top: 200px; width: 28px;transform: rotate(180deg);}
     }
-
 /*SNOW ANIMATION ENDS*/
->>>>>>> 3ff83b470e19efd2ff135ef9f98b53d24e57d20f
 
 body{
+    
     font-family: Georgia, Cambria, sans-serif;
     font-size: 12px;
-   background-color: #ffffff;
-    height: 255%;
+    background-color: #ffffff;
+    height: 100%;
 }
 p{
     
@@ -193,6 +160,10 @@ p{
 a
 {
     font-size: 14px;
+}
+
+article table {
+    width: 100%;
 }
 
 /*HEADER AND NAVIGATION BAR DESIGN BEGINS*/
@@ -209,6 +180,27 @@ a
         color: #fcfcfc;  
         text-decoration: none;  
     }
+    
+    @font-face {
+        font-family:myFont;
+        src: url(Sansation_Bold-webfont.woff);
+    }
+    #title p{
+        font-family: myFont;
+        width: 100px;
+        word-wrap: break-word;
+        border-left: 1px solid;
+        padding-left: 5px;
+        text-shadow: 2px 2px 8px rgb(103, 180, 204);
+    }
+    #title h1{
+        word-wrap: normal;
+        text-transform: uppercase;
+        padding-right: 5px;
+        font-size: 35px;
+        text-shadow: 2px 2px 8px rgb(103, 180, 204);
+    }
+  
     header div#title p,h1
     {
         display: inline-block;
@@ -262,22 +254,17 @@ a
     }
     header div div.search
     {   position: relative;
-        top: 30px;
-        right: 20px;
+        
         width: max-content;
         float:right;
-  
-    }
-header div div.search p
-    {
-        display: inline;
-        padding-right: 10px;
-        font-size: 17px;
+        
+        
+        
     }
     header div div input[type=submit]
     {   
         float: right;
-        padding: 5px 10px 5px 10px;
+       
         border-top-right-radius: 5px;
         border-bottom-right-radius: 5px;
         background-color:#2aa3d0;
@@ -329,7 +316,6 @@ header div div.search p
         text-decoration: none;
         color: #9c9c9c;
     }
-
 /*HEADER AND NAVIGATION BAR DESIGN ENDS*/
 
 /*FOOTER DESIGN BEGINS*/
@@ -359,23 +345,22 @@ header div div.search p
     }
     footer div#topArrow
     {   position: relative;
-        display: flex;
-      align-items: center;
-      justify-content: center;
+       
       width: 100%;
       
       
     }
-    footer div.upDownFooter ul li
+    footer div.quickLinks ul li
     {
-        list-style: none;
+        list-style: square;
     }
-    footer div.upDownFooter div
+    footer div.upDownFooter div:not(:nth-child(3))
     {   position: relative;
         display: inline-block;
         vertical-align: text-top;  
-        padding:10px 20px 20px 0;
-        width: 22%;
+        margin-right: 20px;
+        width: 19%;
+        padding: 10px;
     }
     footer div.upDownFooter div input[type=submit]
     {   
@@ -389,8 +374,8 @@ header div div.search p
     footer div.upDownFooter div input
     {   
         border-radius: 5px;
-        padding: 5px 20px 5px 7px;
-        width: 100%;
+        padding: 5px 0px 5px 7px;
+        width: 90%;
         margin-bottom: 8px;
         border-width: 0;
         background-color:#242424;
@@ -402,7 +387,7 @@ header div div.search p
         border-radius: 5px;
         margin-bottom: 6px;
         border-width: 0;
-        width: 100%;
+        
         background-color:#242424;
         color: #5a5a5a;
     }
@@ -422,23 +407,42 @@ header div div.search p
         float: right;
         top: 15px;
         
+    }footer div.quickLinks
+    {
+        position: relative;
+        display: inline-block;
+        vertical-align: text-top;  
+        margin-right: 20px;
+        width: 23%;
+        padding: 10px;
     }
-    footer div.quickLinks ul li
+    footer div.quickLinks ul li 
+    {
+        height: 40px;
+    }
+    footer div.quickLinks ul li a
     {
         border-bottom: 1px solid #212121;
-        padding:3px 0;
+        padding:5px 0;
     }
-    footer div.quickLinks ul li:first-child
+    footer div.quickLinks ul li a:first-child
     {
         border-bottom: 1px solid #212121;
         padding:0 0 3px 0;
     }
-    footer div.quickLinks ul li img.arrows
+    footer ul li a
     {
-        vertical-align: middle;
-        margin-right: 10px;
+        font-size: 12px;
+        text-decoration: none;
+        color: #525252;
+        float: right;
     }
-
+    footer ul li a:hover
+    {
+        
+        text-decoration: none;
+        color: #935da8;
+    }
     footer div.blogPosts ul li
     {
         position: relative;
@@ -458,13 +462,26 @@ header div div.search p
         
         
     }
-
 /*FOOTER DESIGN ENDS*/
+
+section table{
+    border: 10px solid;
+    border-image: url("images/border.png") 30 stretch;
+    -webkit-border-image: url("images/border.png") 30 stretch;
+}
+section table td{
+    padding:5px;
+}
 .articleContainer2{
     width:250px;
+    
+    
+    
 }
 .articleContainer2 img{
     width:240px;
+    border-radius:20px;
+    box-shadow: 3px 3px 	#F8F8F8;
 }
 .articleContainer2 h3{
     height:55px;
@@ -489,3 +506,4 @@ table{
 section{
     position: relative;
 }
+

@@ -78,3 +78,14 @@ function setTimer(){
     },5000);
 }
 setTimer();
+function changeBackground(){
+    var time=new Date().getHours();
+    if(time>=18)
+    {
+       var k= document.getElementsByTagName('html')[0];console.log(k)
+       k.setAttribute('style','background-image:url("images/night.jpg")')
+    }
+    else{var k= document.getElementsByTagName('html')[0];console.log(k)
+    k.setAttribute('style','background-image:url("#")')}
+}
+changeBackground();

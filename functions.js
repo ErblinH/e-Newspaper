@@ -2,56 +2,61 @@ function snowing(images)
 {
     document.write('<img src="images/'+images+'"  width="20px" class="snowflakes">');
 }
-function article1(image,header,header2,id,pageNumber){
+function article1(image,header1,header2,id,pageNumber,numri){
  
-  var tr=document.getElementById("topArticles");
+  var tbody=document.getElementById("tablebody1");
+  if(numri==1){
+  var tr=document.createElement("tr");
+  tr.setAttribute('id',"bottomArticles1");tbody.appendChild(tr);}
+  if(numri>1){tr=document.getElementById("bottomArticles1")}
+  if(numri==4){var tr=document.createElement("tr");
+  tr.setAttribute('id',"secondBottomArticles1");tbody.appendChild(tr);}
+  if(numri>4){tr=document.getElementById("secondBottomArticles1")}
+  if(numri==7){var tr=document.createElement("tr");
+  tr.setAttribute('id',"thirdBottomArticles1");tbody.appendChild(tr);}
   var td=document.createElement('td');
   var a=document.createElement('a');
-  a.setAttribute('href',"#bigArticle");
-  a.innerHTML='<div class="articleContainer1" id="'+id+'"><img src="images/'+image+'" width="250px" height="160px"><h3 class="articlesHeaders1">'+header+'</h3></div>';
-  td.addEventListener("click",function()
-  { document.getElementById("bigArticleTextContent").innerHTML="";
+  a.setAttribute('href','#bigArticle');
   
-  
+  a.innerHTML='<div class="articleContainer2" id="'+id+'"><img src="images/'+image+'" width="250px" height="160px"><h1 class="articlesHeaders2">'+header1+'</h1><h3 class="articlesHeaders2">'+header2+'</h3></div>';
+  a.addEventListener("click",function()
+  { document.getElementById("bigArticleTextContent").innerHTML=""; 
     var bigArticle=document.getElementById("bigArticleUpperPart")
     bigArticle.innerHTML="";
   var h1=document.createElement('h1');
   var h3=document.createElement('h3');
   var img=document.createElement('img');
-  h1.innerHTML=header;
+  h1.innerHTML=header1;
   
   h3.innerHTML=header2;
   img.setAttribute('width',"300px");
   img.setAttribute('src',"images/"+image);
-        
+    bigArticle.appendChild(img);  
     bigArticle.appendChild(h1);
-    bigArticle.appendChild(img);
     bigArticle.appendChild(h3);
     if(pageNumber==1){
-    sportsText[Object.keys(sportsText)[id]]()}
-    else if(pageNumber==2){
-      healthText[Object.keys(healthText)[id]]()
-    }
-    else{
-      techText[Object.keys(techText)[id]]()
-    }
-    
+      sportsText[Object.keys(sportsText)[id]]()}
+      else if(pageNumber==2){
+        healthText[Object.keys(healthText)[id]]()
+      }
+      else{
+        techText[Object.keys(techText)[id]]()
+      }
   })
   td.appendChild(a);
   tr.appendChild(td);
-  
-  
-  
 
 }
 var nrArticles=0;
-function article2(image,header1,header2,id,pageNumber){
+function article2(image,header1,header2,id,pageNumber,numri){
   nrArticles++;
+ 
   var tbody=document.getElementById("tablebody");
   
+ if(nrArticles==1){var tr=document.createElement("tr");
+ tr.setAttribute('id',"bottomArticles"); tbody.appendChild(tr)}
+  if(nrArticles==4){
   
-  
- if(nrArticles==4){
     var tr=document.createElement("tr");
     tr.setAttribute('id',"secondBottomArticles");
   tbody.appendChild(tr);}
@@ -138,13 +143,38 @@ nr++
   a.setAttribute('href',url);
 }
 
-
-function slid()
-{
-
+var numri=0;
+function searchInput(){
+  var value=document.getElementById("searchInput").value;
+  console.log(value)
+  console.log(value)
+  if(numri!=0){
+    numri=0;
+    document.getElementById("tablebody1").innerHTML="";
+    document.getElementById("bigArticleTextContent").innerHTML=""; 
+    document.getElementById("bigArticleUpperPart").innerHTML="";
+    
+  }
+      
+  for(var a=0;a<sportsHeaders.length;a++){
+    if(sportsHeaders[a].search(value)!=-1){
+      numri++;
+      article1(sportsImages[a],sportsHeaders[a],sportsHeaders2[a],a,1,numri)
+    }
+  }
+  for(var b=0;b<techHeaders.length;b++){
+    if(techHeaders[b].search(value)!=-1){
+      numri++;
+      article1(techImages[b],techHeaders[b],techHeaders2[b],b,1,numri)
+    }
+  }
+  for(var c=0;c<healthHeaders.length;c++){
+    if(healthHeaders[c].search(value)!=-1){
+      numri++;
+      article1(healthImages[c],healthHeaders[c],healthHeaders2[c],c,1,numri)
+    }
+  }
 }
-
-
 
 function getLocation(){
   
