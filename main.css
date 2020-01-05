@@ -30,17 +30,9 @@ article
     height: 175px;
     margin: 0 auto;
 }
-<<<<<<< HEAD
-
-.blini {
-    margin: 0 auto;
-}
-
-=======
 
 
 
->>>>>>> 38eaaee87c3039493b80520cf21708d1f7380e3a
 .artikulli ul li img {
     width: 48px;
     height: 48px;
@@ -359,11 +351,7 @@ a
         text-decoration: underline;
     }
     nav#secondaryMenu ul li a:active{
-<<<<<<< HEAD
-        color: blue;
-=======
         color: #9c9c9c;
->>>>>>> 38eaaee87c3039493b80520cf21708d1f7380e3a
         text-decoration: underline;
     
     }
@@ -572,7 +560,6 @@ article section a:link {
     text-decoration: none;
 }
 
-<<<<<<< HEAD
 
 article section a:hover{
     color: rgb(100, 39, 136);
@@ -584,7 +571,6 @@ article section a:active{
 
 }
 /*BODY PART ENDS HERE*/
- 
 table.meet {
         margin-bottom: 5%;
     width: 100%
@@ -597,16 +583,3 @@ table.meet .meetArticle .meetDes{
 table.meet .meetArticle .meetDes p, h2 {
     margin-left: 5%;
 }
-=======
-
-article section a:hover{
-    color: rgb(100, 39, 136);
-    text-decoration: underline;
-}
-article section a:active{
-    color: blue;
-    text-decoration: underline;
-
-}
-/*BODY PART ENDS HERE*/
->>>>>>> 38eaaee87c3039493b80520cf21708d1f7380e3a

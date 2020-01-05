@@ -1,9 +1,5 @@
 
-<<<<<<< HEAD
-    /*Fillon pjesa e pershkrimit te stazhit*/
-=======
       /*Fillon pjesa e pershkrimit te stazhit*/
->>>>>>> 38eaaee87c3039493b80520cf21708d1f7380e3a
       #more {display: none;}
 
       #more2 {display: none;}
@@ -52,11 +48,7 @@
         background-color: #A0B8EC;
       }
       address{
-<<<<<<< HEAD
             margin-top: -4%;
-=======
-            margin-top: 14%;
->>>>>>> 38eaaee87c3039493b80520cf21708d1f7380e3a
       }
     /*Mbaron pjesa e pershkrimit te stazhit*/
 
@@ -145,11 +137,7 @@
         -webkit-transform: translate(274px);
         -moz-transform: translate(274px);
         -o-transform: translate(274px);
-<<<<<<< HEAD
-        transform: translateX(154%);
-=======
         transform: translate(274px);
->>>>>>> 38eaaee87c3039493b80520cf21708d1f7380e3a
         z-index: 3;
       }
     /*Kanvasi ku shfaqen butonat mbaron*/
@@ -225,11 +213,7 @@
             -o-transform: rotateX(180deg);
             transform: rotateX(180deg);
             outline: 4px solid #C8DBF8;
-<<<<<<< HEAD
             outline-offset: 1px; 
-=======
-            outline-offset: 15px; 
->>>>>>> 38eaaee87c3039493b80520cf21708d1f7380e3a
           }    
     /*Mbaron pjesa e fotos qe rrotollohet*/
 

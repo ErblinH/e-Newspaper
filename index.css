@@ -250,11 +250,7 @@ margin: 0 auto
 }
 
 article table tr th img {
-<<<<<<< HEAD
-margin-top: 11%;
-=======
 margin-top: 30%;
->>>>>>> 38eaaee87c3039493b80520cf21708d1f7380e3a
 }
 
 /*filllon*/
@@ -329,11 +325,7 @@ opacity: 0;
 }
 .shigjetaMajtas2, .shigjetaDjathtas2{
        
-<<<<<<< HEAD
-      width: 24px;
-=======
       width: 18px;
->>>>>>> 38eaaee87c3039493b80520cf21708d1f7380e3a
       position: absolute;
       
       z-index: 1;

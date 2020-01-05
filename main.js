@@ -86,7 +86,7 @@ function changeBackground(){
     if(time>=18)
     {
        var k= document.getElementsByTagName('html')[0];
-       k.setAttribute('style','background-image:url("images/stars.jpg")')
+       k.setAttribute('style','background-image:url("images/night.jpg")')
     }
     else{var k= document.getElementsByTagName('html')[0];console.log(k)
     k.setAttribute('style','background-image:url("#")')}
