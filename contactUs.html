@@ -23,10 +23,10 @@
     <header>
         <nav id="mainMenu">
             <ul>
-                  <li><a href="#">Sign Up</a></li>
-                  <li><a href="#">Login</a></li>
-                  <li><a href="#">RSS Feeds</a></li>
-                  <li><a href="#">Archived News</a></li>
+                  <li><a href="signUp.html" target="_blank">Sign Up</a></li>
+                  <li><a href="logIn.html" target="_blank">Login</a></li>
+                  
+                  <li><a href="articles.html" target="_blank">Archived News</a></li>
                </ul>
             <div class="logos">
               <a href="https://www.linkedin.com/"><img src="images/in.png" width="20px" height="20px"/></a>
@@ -143,15 +143,25 @@
               <tr><td colspan="2">
                    <p>
                    <label>Rate Us</label><br><br>
-                   <input type="rating" name="rating" id="rating" class="hilightable" placeholder="Digit: 1 - 10" >
+                   <input type="rating" name="rating" id="rating" class="required hilightable" placeholder="Digit: 1 - 10" >
                    </p>    
                    <p id="demo"></p>        
                     </td>
                     <td>
                     <label>Type the radius to find circle area</label>
+                    
                     <input type="number" name="radius" id="radius" placeholder="Radius" min="0">
                     <input type="button" value="Area of a circle" name="area" id="area" onclick="calculate()">
                     <p id="demo2"></p>
+                    <label >postal_code</label><input type="text" name="postal_code" pattern="[A-Za-z]{3}" title="Three letter postal code">
+                    <br>
+                    <label for="datalist">Which section do you enjoy?</label>
+                    <input type="text" id="txtlist" placeholder="Type" list="lst" autofocus>
+                    <datalist id="lst">
+                    <option value="Tech">
+                    <option value="Sports">
+                    <option value="Health">
+                    </datalist>
                   </td>
              </tr>
              <tr>
@@ -181,18 +191,19 @@
                 </label>
                      
                  </td>
-                 <td>
-                  <p>European Anthem</p>
-                    <audio controls>
-                    <source src="images/himni.mp3" type="audio/mp3">
-                    </audio> 
-                 </td>
-                 <td>
-                   <p>Piano</p>
-                    <audio controls>
-                    <source src="images/piano.mp3" type="audio/mp3">
-                    </audio> 
-                 </td>
+                </td>
+                <td>
+                 <p>European Anthem</p>
+                   <audio controls>
+                   <source src="images/himni.mp3" type="audio/mp3">
+                   </audio> 
+                </td>
+                <td>
+                  <p>Piano</p>
+                   <audio controls>
+                   <source src="images/piano.mp3" type="audio/mp3">
+                   </audio> 
+                </td>
              </tr>
              <tr>
                  <td >
@@ -214,7 +225,10 @@
                       <input type="submit" id="valid" value="Submit">
                        <input type="reset" value="Clear Form" class="btn">      
                    </div>
-                
+                   
+ 
+ 
+ 
              
              
                  
@@ -229,6 +243,8 @@
        </fieldset>
     </form>
     <output form="mainForm" name="output" for="name lastname"></output>
+    <br>
+    <a href="file:///D:\Kerkesat.pdf">Kerkesat</a><br>
     </article>
 <footer>
 
@@ -250,9 +266,9 @@
       <div class="blogPosts">
         <h4>LATEST BLOG POSTS</h4>
           <ul>
-            <li><a href=""><img src="images/vegans.jpg" width="50px" /><p>Vegans 'need to be aware of B12 deficiency risk'</p></a></li>
-            <li><a href=""><img src="images/facial.jpg" width="50px" /><p>Facial recognition fails on race, government study says</p></a></li>
-            <li><a href=""><img src="images/old.jpg" width="50px" /><p>The Older You Are, the Less Narcissistic You Tend to Be</p></a></li>
+            <li><a href="health.html"><img src="images/vegans.jpg" width="50px" /><p>Vegans 'need to be aware of B12 deficiency risk'</p></a></li>
+            <li><a href="technology.html"><img src="images/facial.jpg" width="50px" /><p>Facial recognition fails on race, government study says</p></a></li>
+            <li><a href="health.html"><img src="images/old.jpg" width="50px" /><p>The Older You Are, the Less Narcissistic You Tend to Be</p></a></li>
           </ul>
       </div>
 
