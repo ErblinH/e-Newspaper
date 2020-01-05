@@ -1,29 +1,25 @@
-<!--<!DOCTYPE html>
-<html>
-<head>
-  <title>Contact Us</title>
-  <style >
-    .error {
-    box-shadow: 0 0 5px #FF5252;
-    border-color: #FF1744;
-}
-  </style>
-</head>--><!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
    <meta charset="utf-8">
-   <title>Contact Us</title>
+   <title>Contact us</title>
    <link rel="stylesheet" href="reset.css" />
    <link rel="stylesheet" href="main.css" /> 
-   <link rel="stylesheet" href="sports.css" />
-     <style >
+   <style >
     .error {
     box-shadow: 0 0 5px #FF5252;
     border-color: #FF1744;
 }
   </style>
+   
+   <script src="data.js"></script>
+   <script src="functions.js"></script>
+   
+   
 </head>
 <body>
+   
+   
     <header>
         <nav id="mainMenu">
             <ul>
@@ -33,231 +29,258 @@
                   <li><a href="#">Archived News</a></li>
                </ul>
             <div class="logos">
-                <a href="#"><img src="images/instagram.jpg"/></a>
-                <a href="#"><img src="images/instagram.jpg"/></a>
-                <a href="#"><img src="images/instagram.jpg"/></a>
-                <a href="#"><img src="images/instagram.jpg"/></a>
-                <a href="#"><img src="images/instagram.jpg"/></a>
+              <a href="https://www.linkedin.com/"><img src="images/in.png" width="20px" height="20px"/></a>
+              <a href="https://twitter.com/"><img src="images/twitter.png"width="20px"  height="20px"/></a>
+              <a href="https://www.pinterest.com/"><img src="images/pinteres.png" width="20px"  height="20px"/></a>
+              <a href="https://aboutme.google.com/"><img src="images/g+.png" width="20px"  height="20px"/></a>
+              <a href="http://rss.org/"><img src="images/wifi.png" width="20px"  height="20px"/></a>
             </div>
             
         </nav>   
         <div class="middle">
             <div class="search">
-                  <input type="submit" value="SUBMIT"/>
-                  <input name="search" type="text" placeholder="Search Our Website"/>
+                  <input id="submitButton" type="submit" value="SUBMIT"/>
+                  <input id="searchInput" name="search" type="text" placeholder="Search Our Website"/>
                   
               </div>
             <div id="title">
-               <h1>EUONYMUS</h1><p>Free PSD<br> Website Template</p>
+               <h1>euonymus</h1><p>Free PSD Website Template</p>
             </div>
             
         </div>
         <nav id="secondaryMenu">
             <ul>
-               <li><a href="index.html">HOME</a></li>
-               <li><a href="sports.html">SPORTS</a></li>
-               <li><a href="health.html">HEALTH</a></li>
-               <li><a href="technology.html">TECHNOLOGY</a></li>
-               <li><a href="aboutUs.html">ABOUT US</a></li>
-               <li><a href="#">HOME</a></li>
-               <li><a href="#">HOME</a></li>
+                <li><a href="index.html">HOME</a></li>
+                <li><a href="sports.html">SPORTS</a></li>
+                <li><a href="health.html">HEALTH</a></li>
+                <li><a href="technology.html">TECHNOLOGY</a></li>
+                <li><a href="aboutUs.html">ABOUT US</a></li>
+                <li><a href="contactUs.html">CONTACT US</a></li>
+                
                  
             </ul>
         </nav>
     </header>
-<body>
-  <form method="post" action="" id="mainForm" autocomplete="on">
-   <fieldset>
-      <legend>Contact Us</legend>
-      <table>
-         <tr>
-            <td >
-               <p>
-               <label>Name</label><br/>
-               <input type="text" name="name" id="name" class="required hilightable" placeholder="Firstname"  autofocus> 
-               </p></td>
-               <td>
-               <p>
-               <label>Lastname</label><br/>
-               <input type="text" name="lastname" id="lastname" class="required hilightable" placeholder="Lastname" >
-               </p>  </td></tr>
-              
-               <tr>
-                <td colspan="2">
-               <p>
-               <label>Email</label><br/>
-               <input type="text" name="mail" id="mail" placeholder="ex@example.com" class="required hilightable">
-               </p>               
-              </td>
-         </tr>
-          <tr><td>
-               <p>
-               <label>Password</label><br/>
-               <input type="password" name="pass1" id="pass1" minlength="8" placeholder="8 characters minimum" class="required hilightable" >
-               </p>               
-              </td>
-         
-          <td>
-               <p>
-               <label>Confirm your password</label><br/>
-               <input type="password" name="pass2" id="pass2" placeholder="Retype your password" class="required hilightable" >
-               </p>               
-              </td>
-         </tr>
-         <tr>
-          <td colspan="2">
-            <label>Sex: 
-                <input name="sex" type="radio" id="male" value="M" checked> M
-                <input name="sex" type="radio" id="female" value="F" > F
-            </label>
-      
-          </td>
-
-         </tr>
-         <tr>
-                  <td colspan="2">
-               <p>
-               <label>Username</label><br/>
-               <input type="username" name="username" id="username" placeholder="username" class="required hilightable" >
-               </p>               
-              </td>
-              <td>
-                <label>Multiply numbers</label>
-                <input type="text" name="firstnumber" id="firstnumber" placeholder="First number">
-                <input type="text" name="secondnumber" id="secondnumber" placeholder="Second number">
-                <input type="button" value="Multiply" name="multiply" id="multiply" onclick="shumezo()">
-                <p id="p01"></p>
-              </td>
-            </tr>
-          <tr><td colspan="2">
-               <p>
-               <label>Rate Us</label><br><br>
-               <input type="rating" name="rating" id="rating" class="hilightable" placeholder="Digit: 1 - 10" >
-               </p>    
-               <p id="demo"></p>        
-              </td>
-                <td>
-                <label>Type the radius to find circle area</label>
-                <input type="number" name="radius" id="radius" placeholder="Radius" min="0">
-                <input type="button" value="Area of a circle" name="area" id="area" onclick="calculate()">
-                <p id="demo2"></p>
-              </td>
-         </tr>
-         <tr>
-          <td colspan="2">
-            <p>
-               <label>How satisfied are you with our page?</label><br><br>
-                <select name="list1">
-                    <option selected>Very satisfied</option>
-                    <option>Average</option>
-                    <option>I did not enjoy it</option>
-                </select>
-            </p>
-          </td>
-         </tr>
-         <tr>
-          <td colspan="2">
+    
+    <article>
+        <section id="bigArticle">
+            <div id="bigArticleUpperPart"></div>
             
-             <label>What should we change?</label><br><br>
-             <label>
-                <input name="chb" type="checkbox" value="1" checked> Design</label>
-               <br>
-            <label> 
-                <input name="chb" type="checkbox" value="2"> UX
-            </label><br>
-            <label>
-                <input name="chb" type="checkbox" value="ch3"> All of the above
-            </label>
-            
-          </td>
-         </tr>
-         <tr>
-          <td >
-            <label for="date">Submiting date:
-             <input type="date" name="date" min="2019-04-01">
-        </label>
-          </td>
-          <td>
-            <label>
-              <input type="button" value="Today's date" id="nowButton" onclick="printoTani()">
-            </label>
-          </td>
-         </tr>
- 
-         <tr>
-            <td colspan="2" rowspan="2">
-               <div class="rectangle centered"> 
-
-                  <input type="submit" id="valid" value="Submit">
-                   <input type="reset" value="Clear Form" class="btn">      
-               </div>
-            
-         
-         
-          
-            <p id="text">
-            Thank you for your time Sir </p>
-            <label>
-              <input type="button" value="Change the text above" id="change" onclick="ndrysho()">
-            </label>
-          </td>
-         </tr>
-      </table>
-   </fieldset>
-</form>
-  <footer>
-       <div id="topArrow">
-           <a href="#mainMenu"><img src="images/uparrow.png" width="40px"/></a>
-       </div>
-      <div class="upDownFooter">
-         
-            <div class="companyDetails">
-               <h4>COMPANY DETAILS</h4>
-               <p>
-                  Lorem ipsum dolor sit <br>amet consectetur, adipisicing elit.<br> Nemo similique reprehenderit ex <br>eveniet obcaecati<br> blanditiis recusandae<br> vitae necessitatibus,<br> aliquid nam et eius commodi<br> tempore quibusdam corrupti <br>eaque ipsum, aspernatur quas!
-               </p>
-            </div>
-            <div class="blogPosts">
-                  <h4>LATEST BLOG POSTS</h4>
-                  <ul>
-                     <li><img src="images/images.jpg" width="50px" /><p>fsref</p></li>
-                     <li><img src="images/images.jpg" width="50px" /><p>rfarefsref</p></li>
-                     <li><img src="images/images.jpg" width="50px" /><p>rfarefsref</p></li>
-                  </ul>
-            </div>
-            <div class="quickLinks">
-               <h4>QUICK LINKS</h4>
-               <ul>
-                  <li><img class="arrows" src="images/arrows.png" style="vertical-align:middle;" width="5px">test</li>
-                  <li><img class="arrows" src="images/arrows.png" width="5px">test</li>
-                  <li><img class="arrows" src="images/arrows.png" width="5px">test</li>
-                  <li><img class="arrows" src="images/arrows.png" width="5px">test</li>
-                  <li><img class="arrows" src="images/arrows.png" width="5px">test</li>
-                  <li><img class="arrows" src="images/arrows.png" width="5px">test</li>
-                  <li><img class="arrows" src="images/arrows.png" width="5px">test</li>
-                  <li><img class="arrows" src="images/arrows.png" width="5px">test</li>
-               </ul>
-            </div>
+            <div id="bigArticleTextContent"></div>
+          </section>
+          <section>
+              <table>
+                 <tbody  id="tablebody1">
                     
-            <div class="contact">
-               <h4>CONTACT US</h4>
-               <input type="text" placeholder="Name"/><br>
-               <input type="email" placeholder="Email" cols="21"/><br>
-               <textarea  rows="5"> Message</textarea><br>
-               <input type="submit" value="SUBMIT"/>
-            </div>
-      
-         </div>
-      
-      
-         <p id="copyright">Copyright &copy; 2013 Domain Name-Al Rights Reserved </p>
-         <p id="template">Template by OS Templates</p>
-           
-   </footer>
-<!--Javascript-->
-<script>
-  //Perdorimi i metodes toString()
-  //Perdorimi i objektit Date
+                 </tbody>
+              </table>
+           </section>
+        <form method="post" action="" id="mainForm" autocomplete="on">
+       <fieldset>
+          <legend>Contact Us</legend>
+          <table>
+             <tr>
+                <td >
+                   <p>
+                   <label>Name</label><br/>
+                   <input type="text" name="name" id="name" class="required hilightable" placeholder="Firstname"  autofocus> 
+                   </p></td>
+                   <td>
+                   <p>
+                   <label>Lastname</label><br/>
+                   <input type="text" name="lastname" id="lastname" class="required hilightable" placeholder="Lastname" >
+                   </p>  </td></tr>
+                  
+                   <tr>
+                       <td colspan="2">
+                   <p>
+                   <label>Email</label><br/>
+                   <input type="text" name="mail" id="mail" placeholder="ex@example.com" class="required hilightable">
+                   </p>               
+                    </td>
+             </tr>
+              <tr><td>
+                   <p>
+                   <label>Password</label><br/>
+                   <input type="password" name="pass1" id="pass1" minlength="8" placeholder="8 characters minimum" class="required hilightable" >
+                    
+                    </p>             
+                    </td>
+             
+              <td>
+                   <p>
+                   <label>Confirm your password</label><br/>
+                   <input type="password" name="pass2" id="pass2" placeholder="Retype your password" class="required hilightable" >
+                   Encryption: <keygen name="secure">  
+                </p>               
+                    </td>
+             </tr>
+             <tr>
+                 <td colspan="2">
+                     <label>Sex: 
+                    <input name="sex" type="radio" id="male" value="M" checked> M
+                    <input name="sex" type="radio" id="female" value="F" > F
+                </label>
+                
+                 </td>
+    
+             </tr>
+             <tr>
+                        <td colspan="2">
+                   <p>
+                   <label>Username</label><br/>
+                   <input type="username" name="username" id="username" placeholder="username" class="required hilightable" >
+                   </p>               
+                    </td>
+                  <td style="background-image: radial-gradient(rgb(223, 183, 183) 15%, rgb(207, 207, 151) 25%, rgb(152, 236, 156) 60%);">
+                    <label>Multiply numbers</label>
+                    <input type="text" name="firstnumber" id="firstnumber" placeholder="First number">
+                    <input type="text" name="secondnumber" id="secondnumber" placeholder="Second number">
+                    <input type="button" value="Multiply" name="multiply" id="multiply" onclick="shumezo()">
+                    <p id="p01"></p>
+                  </td>
+                     </tr>
+              <tr><td colspan="2">
+                   <p>
+                   <label>Rate Us</label><br><br>
+                   <input type="rating" name="rating" id="rating" class="hilightable" placeholder="Digit: 1 - 10" >
+                   </p>    
+                   <p id="demo"></p>        
+                    </td>
+                    <td>
+                    <label>Type the radius to find circle area</label>
+                    <input type="number" name="radius" id="radius" placeholder="Radius" min="0">
+                    <input type="button" value="Area of a circle" name="area" id="area" onclick="calculate()">
+                    <p id="demo2"></p>
+                  </td>
+             </tr>
+             <tr>
+                 <td colspan="2">
+                     <p>
+                        <label>How satisfied are you with our page?</label><br><br>
+                    <select name="list1">
+                        <option selected>Very satisfied</option>
+                        <option>Average</option>
+                        <option>I did not enjoy it</option>
+                    </select>
+                </p>
+                 </td>
+             </tr>
+             <tr>
+                 <td colspan="2" style="background-image: linear-gradient(rgb(218, 214, 196), rgb(228, 228, 140), rgb(137, 226, 137));">
+                     
+                      <label>What should we change?</label><br><br>
+                      <label>
+                    <input name="chb" type="checkbox" value="1" checked> Design</label>
+                        <br>
+                <label>	
+                    <input name="chb" type="checkbox" value="2"> UX
+                </label><br>
+                <label>
+                    <input name="chb" type="checkbox" value="ch3"> All of the above
+                </label>
+                     
+                 </td>
+             </tr>
+             <tr>
+                 <td >
+                     <label for="date">Submiting date:
+                            <input type="date" name="date" min="2019-04-01">
+                  </label>
+                 </td>
+                 <td>
+                     <label>
+                         <input type="button" value="Today's date" id="nowButton" onclick="printoTani()">
+                     </label>
+                 </td>
+             </tr>
+     
+             <tr>
+                <td colspan="2" rowspan="2">
+                   <div class="rectangle centered"> 
+    
+                      <input type="submit" id="valid" value="Submit">
+                       <input type="reset" value="Clear Form" class="btn">      
+                   </div>
+                
+             
+             
+                 
+                     <p id="text">
+                     Thank you for your time Sir </p>
+                     <label>
+                         <input type="button" value="Change the text above" id="change" onclick="ndrysho()">
+                     </label>
+                 </td>
+             </tr>
+          </table>
+       </fieldset>
+    </form>
+    <output form="mainForm" name="output" for="name lastname"></output>
+    </article>
+<footer>
+
+    <div align="center" id="uparrow">
+      <a href="#mainMenu"><img src="images/uparrow.png" width="40px"/></a>
+    </div>
+       
+    <div class="upDownFooter">
+         
+      <div class="companyDetails">
+        <h4>COMPANY DETAILS</h4>
+        <p>
+                  
+
+          TOP NEWS is a public newsbr <br> channel in Kosovo. It is owned <br>by Television of Kosovo <br>(RTK; Albanian: Radio Televizioni i Kosovës) <br>from the year 2012. It main <br>purpose it to serve to its loyal readers the most recent and unbiased news regarding <br>politics, economics, education,<br> sports, showbiz and so on. 
+       </p>
+      </div>
+
+      <div class="blogPosts">
+        <h4>LATEST BLOG POSTS</h4>
+          <ul>
+            <li><a href=""><img src="images/vegans.jpg" width="50px" /><p>Vegans 'need to be aware of B12 deficiency risk'</p></a></li>
+            <li><a href=""><img src="images/facial.jpg" width="50px" /><p>Facial recognition fails on race, government study says</p></a></li>
+            <li><a href=""><img src="images/old.jpg" width="50px" /><p>The Older You Are, the Less Narcissistic You Tend to Be</p></a></li>
+          </ul>
+      </div>
+
+      <div class="quickLinks">
+        <h4>QUICK LINKS</h4>
+          <ul>
+            <li><a href="sports.html">Liverpool hopeful over Van Dijk return for Club World Cup final</a></li>
+             <li><a href="health.html">Vegans 'need to be aware of B12 deficiency risk'</a></li>
+              <li><a href="technology.html">Uber promises changes to avoid Germany ban</a></li>
+              <li><a href="sports.html">Brazilian Mikaili Sol wins Kiteboarding World Championships</a></li>
+              <li><a href="technology.html">YouTube's top earners: Eight-year-old Ryan tops list with $26m</a></li>
+          </ul>
+      </div>
+                    
+      <div class="contact">
+        <h4>CONTACT US</h4>
+            <input type="text" placeholder="Name"/><br>
+            <input type="email" placeholder="Email" cols="21"/><br>
+            <textarea  rows="5"> Message</textarea><br>
+            <input type="submit" value="SUBMIT"/>
+      </div> 
+    </div>
+
+      <p id="copyright">Copyright &copy; 2013 Domain Name-Al Rights Reserved </p>
+      <p id="template">Template by OS Templates</p>          
+  </footer>
+  <!------------------------------------------------------------------------>
+
+  <script src="data.js" type="text/JavaScript"></script>
+ 
+  <script src="functions.js" type="text/JavaScript"></script>
+
+  <div id="geolocation">
+    <script src="index.js" type="text/JavaScript"></script>
+  </div>
+
+  <script>
+  
+	//Perdorimi i metodes toString()
+	//Perdorimi i objektit Date
 function fillimi(){
     document.getElementById("nowButton").addEventListener("click",printoTani,false);
   }
@@ -321,11 +344,17 @@ function calculate() {
   var numri = rrethi.toPrecision(4);
   console.log(numri);
  // var n = parseInt(numri, 10)
-  document.getElementById("demo2").innerHTML = "Area of the circle with radius " + num+" is: "+numri;
+ 
+  document.getElementById("demo2").innerHTML = "Area of the circle with radius " + num+" is: "+numri+"<br>"+numri.whoAmI();
+}
+Object.prototype.whoAmI = function(){
+    return "The result is an object";
 }
 //Perdorimi i konstantes Number.EPSILON, metodes Math.abs 
 function eps(){
 var result = Math.abs(0.2 - 0.3 +0.1);
+
+
 
 console.log(result);
 
@@ -346,7 +375,7 @@ function myFunction() {
 
   if (isNaN(x) || x < 1 || x > 10) {//metoda isNaN()
     var email = document.getElementsByName("rating")[0];
-    email.value='';
+   	email.value='';
     email.placeholder='Invalid input.(1-10)';
     email.classList.add("error");
     return true;
@@ -370,7 +399,7 @@ function validateEmail()
     
     return (false);
 }
-  //Validimi se a pershtaten password dhe confirmaton password
+	//Validimi se a pershtaten password dhe confirmaton password
   var password = document.getElementById("pass1")
   var confirm_password = document.getElementById("pass2");
 
@@ -481,7 +510,6 @@ window.addEventListener("load", function(){
         strongPassword();
       }
     });
-});
-</script>
+})</script>
 </body>
 </html>

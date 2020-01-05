@@ -10,6 +10,10 @@ html
     background-color: rgb(191, 192, 186);
     
 }
+body{
+    width: 100%;
+    height:max-content
+}
 
 
 article
@@ -19,32 +23,53 @@ article
    background-color: #ffffff;
 }
 
+
+.artikulli{
+    position: relative;
+    
+    height: 175px;
+    margin: 0 auto;
+}
+
+
+
+.artikulli ul li img {
+    width: 48px;
+    height: 48px;
+    margin-bottom: 21px;
+}
+
+.artikulli  ul li img, .teksti{
+    display: inline-block;
+}
+
+.teksti  p, h3{
+    font-size: 15px;
+    display: block;
+    margin-bottom: 6px;
+}
 /*SNOW ANIMATION BEGINS*/
-    .snowflakes
-    {   z-index: 3;
-        width: 0;
-        
-        position: absolute;
-        
-       
-        animation: snow infinite;
-        animation-duration: 4s;
-        animation-timing-function: linear;
-
-        -webkit-animation:snow infinite;
-        -webkit-animation-duration: 4s;
-        -webkit-animation-timing-function: linear;
-       
-    }
-    .snowflakes:nth-child(1)
-    {
-        animation-delay: 2s;
-        -webkit-animation-delay:2s;
-        transform: translate(100px);
-        -webkit-transform: translate(100px);
-        left: 100px;
-    }
-
+.snowflakes
+{   z-index: 3;
+    width: 0;
+    
+    position: absolute;
+    animation: snow infinite;
+    animation-duration: 4s;
+    animation-timing-function: linear;
+    -webkit-animation:snow infinite;
+    -webkit-animation-duration: 4s;
+    -webkit-animation-timing-function: linear;
+   
+}
+.snowflakes:nth-child(1)
+{
+    animation-delay: 2s;
+    -webkit-animation-delay:2s;
+    transform: translate(100px);
+    -webkit-transform: translate(100px);
+    left: 100px;
+}
     .snowflakes:nth-child(2)
     {
         animation-delay: 1s;
@@ -143,18 +168,19 @@ article
 
         100%{top: 200px; width: 28px;transform: rotate(180deg);}
     }
+
 /*SNOW ANIMATION ENDS*/
 
 body{
     
     font-family: Georgia, Cambria, sans-serif;
     font-size: 12px;
-    background-color: #ffffff;
-    height: 100%;
+   background-color: #ffffff;
+    
 }
 p{
     
-    font-size:12px;
+    font-size:11px;
     
 }
 a
@@ -162,9 +188,6 @@ a
     font-size: 14px;
 }
 
-article table {
-    width: 100%;
-}
 
 /*HEADER AND NAVIGATION BAR DESIGN BEGINS*/
     nav{
@@ -174,15 +197,9 @@ article table {
     header
     {   
         background-color: #ffffff;
-        width: 960px;
-        margin: 0 auto;
-    }
-    header a
-    {
-        color: #fcfcfc;  
-        text-decoration: none;  
     }
     
+
     @font-face {
         font-family:myFont;
         src: url(Sansation_Bold-webfont.woff);
@@ -226,9 +243,22 @@ article table {
         border-right:0px;
         padding-right: 7px;
     }
-    nav#mainMenu a
-    {
+   header a{
+       font-size: 12px;
+   }
+    header a:link {
         color: #fdfbfe;
+        text-decoration: none;
+    }
+
+   header a:hover{
+        color: rgb(100, 39, 136);
+        text-decoration: underline;
+    }
+   header a:active{
+        color: blue;
+        text-decoration: underline;
+    
     }
     div.logos
     {
@@ -248,36 +278,33 @@ article table {
     }
     .middle div#title
     {   position: relative;
-        left: 20px;
-        
+        left: 20px;        
         top: 30px;
-        
-
+        width: 40%;
     }
     header div div.search
-    {   position: relative;
-        
+    {   position: relative;  
         width: max-content;
-        float:right;
-        
-        
-        
+        float:right;  
+        top: 27px;
+        right: 15px;
     }
     header div div input[type=submit]
     {   
         float: right;
-       
         border-top-right-radius: 5px;
         border-bottom-right-radius: 5px;
         background-color:#2aa3d0;
         border-width: 0px;
+        height: 27px;
         color: #fdfbfe;
     }
     header div div input[type=text]
     {
         float:right;
-        height:auto;
-        padding: 5px 0px 5px 10px;
+        height:25px;
+        width:170px;
+        padding-left:10px;
         border-top-left-radius: 5px;
         border-bottom-left-radius: 5px;
         border-width: 0px;
@@ -310,14 +337,25 @@ article table {
         display: inline;
         border-left:1px solid #3b3b3b;
         padding: 2px 10px;
-        
-        
     }
-    nav#secondaryMenu ul li a
-    {
+    nav#secondaryMenu ul li a{
+        font-size: 14px;
+    }
+    nav#secondaryMenu ul li a:link{
         text-decoration: none;
         color: #9c9c9c;
     }
+
+    nav#secondaryMenu ul li a:hover{
+        color: rgb(58, 175, 179);
+        text-decoration: underline;
+    }
+    nav#secondaryMenu ul li a:active{
+        color: #9c9c9c;
+        text-decoration: underline;
+    
+    }
+
 /*HEADER AND NAVIGATION BAR DESIGN ENDS*/
 
 /*FOOTER DESIGN BEGINS*/
@@ -361,7 +399,7 @@ article table {
         display: inline-block;
         vertical-align: text-top;  
         margin-right: 20px;
-        width: 19%;
+        width: 18.5%;
         padding: 10px;
     }
     footer div.upDownFooter div input[type=submit]
@@ -399,9 +437,6 @@ article table {
         position: relative;
         float: left;
         top: 15px;
-        
-        
-
     }
     footer p#template
     {   
@@ -459,14 +494,14 @@ article table {
         float: left;
         margin-right: 10px;
     }
-    footer div.blogPosts ul li p
-    {
-        
-        
-    }
+
 /*FOOTER DESIGN ENDS*/
 
-section table{
+/*BODY PART STARTS HERE*/
+.gridContainer{
+
+}
+#smallArticles{
     border: 10px solid;
     border-image: url("images/border.png") 30 stretch;
     -webkit-border-image: url("images/border.png") 30 stretch;
@@ -475,15 +510,12 @@ section table td{
     padding:5px;
 }
 .articleContainer2{
-    width:250px;
-    
-    
-    
+    width:250px;            
 }
 .articleContainer2 img{
     width:240px;
     border-radius:20px;
-    box-shadow: 3px 3px 	#F8F8F8;
+    box-shadow: 3px 3px #F8F8F8;
 }
 .articleContainer2 h3{
     height:55px;
@@ -491,6 +523,9 @@ section table td{
 }
 .articleContainer2 td{
     margin-right: 20px;
+}
+.articleContainer2 h1{
+    font-size: 18px;
 }
 #bigArticle{
     width:70%;
@@ -502,10 +537,37 @@ section table td{
 #bigArticle img{
     width:400px
 }
+#bigArticle h1{
+    font-size: 20px;
+}
+#bigArticle h3{
+    font-size:16px;
+}
+#bigArticle p{
+    font-size:14px;
+}
+#bigArticle ol li{
+    font-size:14px;
+}
 table{
     margin: auto;
 }
 section{
     position: relative;
 }
+article section a:link {
+    color: rgb(111, 101, 255);
+    text-decoration: none;
+}
 
+
+article section a:hover{
+    color: rgb(100, 39, 136);
+    text-decoration: underline;
+}
+article section a:active{
+    color: blue;
+    text-decoration: underline;
+
+}
+/*BODY PART ENDS HERE*/

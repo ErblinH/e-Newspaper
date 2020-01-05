@@ -1,346 +1,76 @@
 /*SLIDER DESIGN BEGINS*/
 
-        .photoContainer{
+.photoContainer{
             
-            height: 350px;
-            /* max-width: 1000px; */
-            margin: auto;
-            user-select: none;
-            /* box-shadow: 0px 0px 3px 1px #00000078; */
-            /* padding: 10px; */
-            box-sizing: border-box;
-        }
-
-        .photoContainer .slideShowC{
-            width: 100%;
-            height: 90%;
-            overflow: hidden;
-            background-color: gainsboro;
-            position: relative;
-            
-                height: 350px;
-                /* max-width: 1000px; */
-                margin: auto;
-                user-select: none;
-                /* box-shadow: 0px 0px 3px 1px #00000078; */
-                /* padding: 10px; */
-                box-sizing: border-box;
-            }
-
-            .photoContainer .slideShowC{
-                width: 100%;
-                height: 90%;
-                overflow: hidden;
-                background-color: gainsboro;
-                position: relative;
-                
-            }
-
-            .MbajtesiImazheve img{
-                width: 100%;
-                height: 100%;
-            }
-
-            .MbajtesiImazheve{
-                width: 100%;
-                height: 100%;
-                position: absolute;
-                opacity: 0;
-            }
-
-
-            .shigjetaMajtas, .shigjetaDjathtas{
-                width: 50px;
-                position: absolute;
-                left: 0;
-                z-index: 1;
-                transition: background 0.5s;
-                height: 72px;
-                top: 50%;
-                transform: translateY(-50%);
-                border-top-right-radius: 50px;
-                border-bottom-right-radius: 50px;
-            } 
-
-            .shigjetaDjathtas{
-                left: auto;
-                right: 0;
-                border-top-right-radius: 0px;
-                border-bottom-right-radius: 0px;
-                border-top-left-radius: 50px;
-                border-bottom-left-radius: 50px;    
-            }
-
-            .shigjetaMajtas:hover, .shigjetaDjathtas:hover{
-                cursor: pointer;
-                background: #000000a8;
-            }
-
-            .shigjeta {
-                display: inline-block;
-                border: 3px solid white;
-                width: 10px;
-                height: 10px;
-                border-left: none;
-                border-bottom: none;
-                margin: auto;
-                position: absolute;
-                left: 0;
-                right: 0;
-                top: 0;
-                bottom: 0;
-            }
-
-            .majtasShigjeta{
-                transform: rotateZ(-135deg);
-            }
-            .djathtasShigjeta{
-                transform: rotateZ(45deg);
-            }
-
-            .captionHolder{
-                position: absolute;
-                bottom: 0;
-                z-index: 1;
-                color: white;
-                font-family: sans-serif;
-                font-size: 20px;
-                text-align: right;
-                width: 100%;
-                background: #00000047;
-                height: 125px;
-                line-height: 50px;
-                overflow: hidden;
-                /* right: 18px; */
-                left: 50%;
-            }
-
-            .MbajtesiImazheve .captionText{
-               position: absolute;
-               right: 100px;
-               top: 200px;
-               z-index: 2;
-            }
-
-            .MbajtesiImazheve .teksti2{
-               display: none;
-            }
-
-            #dotsContainer{
-                position: relative;
-                width: 100%;
-                height: 10%;
-                text-align: left;
-                padding-top: 20px;
-                box-sizing: border-box;
-                margin-left: 10px;
-                top: 85%;
-            }
-
-            #dotsContainer .dots{
-                display: inline-block;
-                width: 15px;
-                height: 15px;
-                border-radius: 50%;
-                margin-left: 5px;
-                background-color: #bbb;
-                cursor: pointer;
-                transition:background-color 0.5s;
-            }
-
-            #dotsContainer .dots:hover, #dotsContainer .dots.active {
-                background-color: #717171;
-            }
-
-            #dotsContainer .dots:first-child{
-                margin-left: 0;
-            }
-
-             .moveLeftCurrentSlide{
-                 z-index:-1;
-                animation-name: moveLeftCurrent;
-                animation-duration: 0.5s;
-                animation-timing-function: linear;
-                animation-fill-mode:forwards;
-
-            }
-            .moveLeftNextSlide{
-                animation-name: moveLeftNext;
-                animation-duration: 0.5s;
-                animation-timing-function: linear;
-                animation-fill-mode:forwards;
-            }
-            @keyframes moveLeftCurrent {
-                from {margin-left: 0;opacity: 1;}
-                to {margin-left: -100%;opacity: 1;}
-            }
-            @keyframes moveLeftNext {
-                from {margin-left: 100%;opacity: 1;}
-                to {margin-left: 0%;opacity: 1;}
-            }
-
-            .moveRightCurrentSlide{
-                animation-name: moveRightCurrent;
-                animation-duration: 0.5s;
-                animation-timing-function: linear;
-                animation-fill-mode:forwards;
-            }
-            .moveRightPrevSlide{
-                animation-name: moveRightPrev;
-                animation-duration: 0.5s;
-                animation-timing-function: linear;
-                animation-fill-mode:forwards;
-            }
-            @keyframes moveRightCurrent {
-                from {margin-left: 0;opacity: 1;}
-                to {margin-left: 100%;opacity: 1;}
-            }
-            @keyframes moveRightPrev {
-                from {margin-left: -100%;opacity: 1;}
-                to {margin-left: 0%;opacity: 1;}
-            }
-
-            .slideTextFromBottom {
-                animation-name: slideTextFromBottom;
-                animation-duration: 0.7s;
-                animation-timing-function: ease-out;
-            }
-            @keyframes slideTextFromBottom {
-                from {opacity: 0;margin-top: 100px}
-                to {opacity: 1;margin-top: 0px;}
-            }
-            .slideTextFromTop {
-                animation-name: slideTextFromTop;
-                animation-duration: 0.7s;
-                animation-timing-function: ease-out;
-            }
-            @keyframes slideTextFromTop {
-                from {opacity: 0;margin-top: -100px}
-                to {opacity: 1;margin-top: 0px;}
-            }
-/*SLIDER DESIGN ENDS*/
-
-
-/*second slide begins*/
-    html, body {
-    padding: 10px 0 0 0;
-    margin: 0;
-}
-
-article{
-    width:960px;
-    background: #ddd;
-    margin: 0 auto
-}
-
-article.slide2{
-    width: 960px;
-    height: 200px;
-    background: #ddd;
-    margin: 0 auto
-}
-
-article.slide1{
-    width: 960px;
     height: 350px;
-    background: #ddd;
-    margin: 0 auto
+    /* max-width: 1000px; */
+    margin: auto;
+    user-select: none;
+     box-shadow: 0px 0px 3px 1px #00000078; 
+    /* padding: 10px; */
+    box-sizing: border-box;
 }
 
-article table tr th img {
-    margin-top: 30%;
-}
-
-/*filllon*/
-    .photoContainer2{
-        width: 474px;
-        height: 200px;
+.photoContainer .slideShowC{
+    width: 100%;
+    
+    overflow: hidden;
+    background-color: gainsboro;
+    position: relative;
+    
+        height: 350px;
         /* max-width: 1000px; */
         margin: auto;
         user-select: none;
-        /* box-shadow: 0px 0px 3px 1px #00000078; */
+         box-shadow: 0px 0px 3px 1px #00000078; 
         /* padding: 10px; */
         box-sizing: border-box;
     }
 
-    .photoContainer2 .slideShowC2{
-            width: 100%;
-    height: 100%;
-    overflow: hidden;
-    background-color: gainsboro;
-    position: relative;
-    margin-left: 57%;
-    padding-top: 19px;
-    border-top: 1px solid red;
-    margin-top: 1%;
-        
-    }
 
-    .photoContainer2 .slideShowC2 .texti{
-            position: absolute;
-            left: 0;
-            margin-left: 30%;
-    }
-
-    .MbajtesiImazheve2 .right {
-        float: right; 
-        display: inline-block;
-    }
-
-    .MbajtesiImazheve2 .left {
-        float: left;
-    }
-
-    .MbajtesiImazheve2 .poz2 {
-       display: inline-block;
-       margin-left: 43%;
-    }
-
-    .MbajtesiImazheve2 .tekst {
-       float: left;
-    }
-
-
-    .MbajtesiImazheve2 img{
-        width: 48.5%;
-        height: 90%;
-    }
-
-    .MbajtesiImazheve2{
+    .MbajtesiImazheve img{
         width: 100%;
-        height: 62%;
+        height: 100%;
+    }
+
+    .MbajtesiImazheve{
+        width: 100%;
+        height: 100%;
         position: absolute;
         opacity: 0;
     }
 
-    .shigjetaMajtas2, .shigjetaDjathtas2{
-            right: -36%;
-        width: 24px;
+
+    .shigjetaMajtas, .shigjetaDjathtas{
+        width: 50px;
         position: absolute;
-        left: 132%;
+        left: 0;
         z-index: 1;
         transition: background 0.5s;
         height: 72px;
-        top: 2%;
+        top: 50%;
         transform: translateY(-50%);
         border-top-right-radius: 50px;
         border-bottom-right-radius: 50px;
     } 
 
-    .shigjetaDjathtas2{
+    .shigjetaDjathtas{
         left: auto;
-        right: -37%;
+        right: 0;
         border-top-right-radius: 0px;
         border-bottom-right-radius: 0px;
         border-top-left-radius: 50px;
         border-bottom-left-radius: 50px;    
     }
 
-    
+    .shigjetaMajtas:hover, .shigjetaDjathtas:hover{
+        cursor: pointer;
+        background: #000000a8;
+    }
 
-    .shigjeta2 {
+    .shigjeta {
         display: inline-block;
-        border: 3px solid blue;
+        border: 3px solid white;
         width: 10px;
         height: 10px;
         border-left: none;
@@ -353,62 +83,124 @@ article table tr th img {
         bottom: 0;
     }
 
-    .majtasShigjeta2{
+    .majtasShigjeta{
         transform: rotateZ(-135deg);
     }
-    .djathtasShigjeta2{
+    .djathtasShigjeta{
         transform: rotateZ(45deg);
     }
 
-    /**/
+    .captionHolder{
+        position: absolute;
+        bottom: 0;
+        z-index: 1;
+        color: white;
+        font-family: sans-serif;
+        font-size: 20px;
+        text-align: right;
+        width: 100%;
+        background: #00000047;
+        height: 125px;
+        line-height: 50px;
+        overflow: hidden;
+        /* right: 18px; */
+        left: 50%;
+    }
 
-     .moveLeftCurrentSlide2{
-        animation-name: moveLeftCurrent2;
+    .MbajtesiImazheve .captionText{
+       position: absolute;
+       
+    }
+
+    .MbajtesiImazheve .teksti2{
+       display: none;
+    }
+
+    #dotsContainer{
+        position: relative;
+        width: 100%;
+        height: 10%;
+        text-align: left;
+        padding-top: 20px;
+        box-sizing: border-box;
+        margin-left: 10px;
+        top: 85%;
+    }
+
+    #dotsContainer .dots{
+        display: inline-block;
+        width: 15px;
+        height: 15px;
+        border-radius: 50%;
+        margin-left: 5px;
+        background-color: #bbb;
+        cursor: pointer;
+        transition:background-color 0.5s;
+    }
+
+    #dotsContainer .dots:hover, #dotsContainer .dots.active {
+        background-color: #717171;
+    }
+
+    #dotsContainer .dots:first-child{
+        margin-left: 0;
+    }
+
+     .moveLeftCurrentSlide{
+         z-index:-1;
+        animation-name: moveLeftCurrent;
         animation-duration: 0.5s;
         animation-timing-function: linear;
         animation-fill-mode:forwards;
 
     }
-    .moveLeftNextSlide2{
-        animation-name: moveLeftNext2;
+    .moveLeftNextSlide{
+        animation-name: moveLeftNext;
         animation-duration: 0.5s;
         animation-timing-function: linear;
         animation-fill-mode:forwards;
     }
-    @keyframes moveLeftCurrent2 {
+    @keyframes moveLeftCurrent {
         from {margin-left: 0;opacity: 1;}
         to {margin-left: -100%;opacity: 1;}
     }
-    @keyframes moveLeftNext2 {
+    @keyframes moveLeftNext {
         from {margin-left: 100%;opacity: 1;}
         to {margin-left: 0%;opacity: 1;}
     }
 
-    .moveRightCurrentSlide2{
-        animation-name: moveRightCurrent2;
+    .moveRightCurrentSlide{
+        animation-name: moveRightCurrent;
         animation-duration: 0.5s;
         animation-timing-function: linear;
         animation-fill-mode:forwards;
     }
-    .moveRightPrevSlide2{
-        animation-name: moveRightPrev2;
+    .moveRightPrevSlide{
+        animation-name: moveRightPrev;
         animation-duration: 0.5s;
         animation-timing-function: linear;
         animation-fill-mode:forwards;
     }
-    @keyframes moveRightCurrent2 {
+    @keyframes moveRightCurrent {
         from {margin-left: 0;opacity: 1;}
         to {margin-left: 100%;opacity: 1;}
     }
-    @keyframes moveRightPrev2 {
+    @keyframes moveRightPrev {
         from {margin-left: -100%;opacity: 1;}
         to {margin-left: 0%;opacity: 1;}
     }
 
-    .slideTextFromBottom2 {
-        animation-name: slideTextFromBottom2;
+    .slideTextFromBottom {
+        animation-name: slideTextFromBottom;
         animation-duration: 0.7s;
         animation-timing-function: ease-out;
+        position: relative;
+        top: 20px;
+        left: 20px;
+        width:400px;
+        color: white;
+        font-size:18px ;
+        text-align: start;
     }
     @keyframes slideTextFromBottom {
         from {opacity: 0;margin-top: 100px}
@@ -418,59 +210,281 @@ article table tr th img {
         animation-name: slideTextFromTop;
         animation-duration: 0.7s;
         animation-timing-function: ease-out;
+        position: relative;
+        top: 20px;
+        left: 20px;
+        width:400px;
+        color: white;
+        font-size:18px ;
+        text-align: start;
     }
     @keyframes slideTextFromTop {
         from {opacity: 0;margin-top: -100px}
         to {opacity: 1;margin-top: 0px;}
     }
+/*SLIDER DESIGN ENDS*/
+
+
+/*second slide begins*/
+
+
+article{
+width:100%;
+
+margin: 0 auto
+}
+
+article.slide2{
+width: 100%;
+position: relative;
+height: 200px;
+
+margin: 0 auto
+}
+
+article.slide1{
+width: 100%;
+height: 350px;
+
+margin: 0 auto
+}
+
+article table tr th img {
+margin-top: 30%;
+}
+
+/*filllon*/
+.photoContainer2{
+width: 100%;
+height: 220px;
+/* max-width: 1000px; */
+margin: auto;
+user-select: none;
+/* box-shadow: 0px 0px 3px 1px #00000078; */
+/* padding: 10px; */
+box-sizing: border-box;
+}
+
+.photoContainer2 .slideShowC2{
+    width: 100%;
+height: 100%;
+overflow: hidden;
+
+position: relative;
+
+
+
+}
+
+.photoContainer2 .slideShowC2 .texti{
+    position: absolute;
+    left: 0;
+    margin-left: 30%;
+}
+
+.MbajtesiImazheve2 .right {
+
+display: inline-block;
+float: left;
+}
+
+.MbajtesiImazheve2 .left {
+float: right;
+
+}
+
+.MbajtesiImazheve2 .tekst2 {
+float: right;
+width: 47.5%;
+
+}
+
+.MbajtesiImazheve2 .tekst {
+    float: left;
+    width: 47.5%;
+}
+.MbajtesiImazheve2 h2,p {
+    text-align: start;
+    }
+    
+    .MbajtesiImazheve2 h2,p {
+       text-align: start;
+    }
+
+
+.MbajtesiImazheve2 img{
+width: 47.5%;
+height: 90%;
+}
+
+.MbajtesiImazheve2{
+width: 100%;
+height: 62%;
+position: absolute;
+opacity: 0;
+}
+.shigjetaMajtas2, .shigjetaDjathtas2{
+       
+      width: 18px;
+      position: absolute;
+      
+      z-index: 1;
+      transition: background 0.5s;
+      height: 25px;
+      top: 2%;
+      transform: translateY(-50%);
+      border-top-right-radius: 50px;
+      border-bottom-right-radius: 50px;
+  } 
+
+  .shigjetaMajtas2{
+      margin-left: 43%;
+  }    
+
+  .shigjetaDjathtas2{
+      left: auto;
+      right: 3%;
+      border-top-right-radius: 0px;
+      border-bottom-right-radius: 0px;
+      border-top-left-radius: 50px;
+      border-bottom-left-radius: 50px;    
+  }
+
+  
+
+  .shigjeta2 {
+      display: inline-block;
+      border: 3px solid blue;
+      width: 10px;
+      height: 10px;
+      border-left: none;
+      border-bottom: none;
+      margin: auto;
+      position: absolute;
+      left: 0;
+      right: 0;
+      top: 0;
+      bottom: 0;
+  }
+
+  .majtasShigjeta2{
+      transform: rotateZ(-135deg);
+  }
+  .djathtasShigjeta2{
+      transform: rotateZ(45deg);
+  }
+
+
+/**/
+
+.moveLeftCurrentSlide2{
+animation-name: moveLeftCurrent2;
+animation-duration: 0.5s;
+animation-timing-function: linear;
+animation-fill-mode:forwards;
+
+}
+.moveLeftNextSlide2{
+animation-name: moveLeftNext2;
+animation-duration: 0.5s;
+animation-timing-function: linear;
+animation-fill-mode:forwards;
+}
+@keyframes moveLeftCurrent2 {
+from {margin-left: 0;opacity: 1;}
+to {margin-left: -100%;opacity: 1;}
+}
+@keyframes moveLeftNext2 {
+from {margin-left: 100%;opacity: 1;}
+to {margin-left: 0%;opacity: 1;}
+}
+
+.moveRightCurrentSlide2{
+animation-name: moveRightCurrent2;
+animation-duration: 0.5s;
+animation-timing-function: linear;
+animation-fill-mode:forwards;
+}
+.moveRightPrevSlide2{
+animation-name: moveRightPrev2;
+animation-duration: 0.5s;
+animation-timing-function: linear;
+animation-fill-mode:forwards;
+}
+@keyframes moveRightCurrent2 {
+from {margin-left: 0;opacity: 1;}
+to {margin-left: 100%;opacity: 1;}
+}
+@keyframes moveRightPrev2 {
+from {margin-left: -100%;opacity: 1;}
+to {margin-left: 0%;opacity: 1;}
+}
+
 /*mbaron*/
 
 /*slideri 2 fillon*/
 
-     .wraper{ 
-            position: absolute;
-            margin-top: 2%;
-            text-align: center;
-            display: flex;
-            justify-content: space-between;
-            justify-content: space-around;
-     }
-
-     .art{
-          padding-top: 19px;
-    /* background: purple; */
-    width: 225px;
-    height: 125px;
-    margin-top: 2%;
-     }
-
-     .art2{
-     
-      width:470px;
-      height:125px;
-      margin-left: -6%;
-     }
-
-     .wraper .pozi1{
-           border-top: 1px solid red;
-    /* right: 108px; */
-    position: absolute;
-    /* margin-right: 1%; */
-    left: 0;
-    padding-right: 34%;
-     }
-
-     .wraper .pozi1 .texti2 {
-           color: red;
-     }
-
-     .wraper .pozi2{
-            top: 7%;
-    left: 102%;
+.wraper{ 
     position: relative;
-   }
+    width: 100%;
+    margin-top: 2%;
+    text-align: center;
+    
+   /* display: flex;
+    justify-content: space-between;
+    justify-content: space-around;*/
+}
+.oop{
+    padding-top: 30px;
+    width: 47%;
+    position: relative;
+    float: left;
+    margin-left: 2%;
+    border-top: 1px solid red;
+    padding-top: 20px;
+}
 
+.art img{
+    width: 100%;
 
+/* background: purple; */
+
+}
+
+.art2{
+    padding-top: 30px;
+float: right;
+width:47%;
+height:125px;
+margin-right: 2%;
+border-top: 1px solid red;
+padding-top: 20px;
+
+}
+
+.wraper .pozi1{
    
+/* right: 108px; */
+position: absolute;
+/* margin-right: 1%; */
+position: relative;
+float: left;
+
+width: 47.5%;
+
+}
+
+.wraper .pozi1 .texti2 {
+   color: red;
+}
+
+.wraper .pozi2{
+    width:47.5%;
+position: relative;
+float:right;
+}
+
+
+
 
 /*slideri 2 mbaron*/

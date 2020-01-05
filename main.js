@@ -8,7 +8,7 @@ function initGallery(){
     captionText=document.querySelector(".captionHolder .captionText");
     
     captionText.innerText=captionText.innerText+slides[slideIndex].querySelector(".captionText").innerText;
-
+    captionText.className="captionText "+"slideTextFromBottom";
     if(slides.length<2){
         var nextPrevBtns=document.querySelector(".shigjetaMajtas,.shigjetaDjathtas");
         nextPrevBtns.style.display="none";

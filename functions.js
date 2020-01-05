@@ -41,7 +41,7 @@ function article1(image,header1,header2,id,pageNumber,numri){
       }
       else{
         techText[Object.keys(techText)[id]]()
-      }
+      } 
   })
   td.appendChild(a);
   tr.appendChild(td);
@@ -83,7 +83,7 @@ function article2(image,header1,header2,id,pageNumber,numri){
   h3.innerHTML=header2;
   img.setAttribute('width',"300px");
   img.setAttribute('src',"images/"+image);
-    bigArticle.appendChild(img);  
+    bigArticle.append(img);  
     bigArticle.appendChild(h1);
     bigArticle.appendChild(h3);
     if(pageNumber==1){
@@ -146,8 +146,7 @@ nr++
 var numri=0;
 function searchInput(){
   var value=document.getElementById("searchInput").value;
-  console.log(value)
-  console.log(value)
+  
   if(numri!=0){
     numri=0;
     document.getElementById("tablebody1").innerHTML="";
@@ -176,11 +175,14 @@ function searchInput(){
   }
 }
 
+
+
 function getLocation(){
   
   
   function getLoc(position)
 { var snow=document.getElementById("geolocation");
+console.log(position)
    var latitude=position.coords.latitude;
    console.log(latitude);
    var month=new Date().getMonth();
