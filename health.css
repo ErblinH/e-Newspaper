@@ -11,9 +11,7 @@
    /* background-image: radial-gradient(circle, red, yellow, green);
    background-image: repeating-radial-gradient(red, yellow 10%, green 15%);*/
 }
-.articleContainer2{
-    border-style: dotted dashed solid double;
-}
+
 footer div.upDownFooter ul li
 {
     list-style: circle;

@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
    <meta charset="utf-8">
-   <title>big boy blini omg</title>
+   <title>About Us</title>
    <link rel="stylesheet" href="reset.css" />
    <link rel="stylesheet" href="main2.css" />
    <link rel="stylesheet" type="text/css" href="aboutUs.css"> 
@@ -16,10 +16,14 @@
   <!--Pjesa ku numerohen klikimet-->
     <script type="text/javascript">
                 var counter = 0;
-
+                sessionStorage.setItem("btn", counter);
                 function click(){
-                  counter++;
-                  document.getElementById("pa").innerHTML = counter;
+                  if (sessionStorage.btn) {
+                      sessionStorage.btn = Number(sessionStorage.btn)+1;
+                    } else {
+                      sessionStorage.btn = 1;
+                    }
+                    document.getElementById("pa").innerHTML =sessionStorage.btn;
                 }
                 document.addEventListener("click",click);
     </script>
@@ -104,21 +108,10 @@
               <img src="images/foto2.jpg" alt="Fotoja mungon"><figcaption>Fig.1 - Italy.</figcaption></div>
             </figure>  
           <div id="two">
-              Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-              tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-              quis nostratur. Excepteur sint occaecat cupidatat non 
-              <img style="width: 50px; height:50px; float:right; margin: 5px;" src="images/foto1.jpg">
-              proident, sunt in culpa qui officia deserunt mollit anim id est laborum.Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-              tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-              quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-              consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
-              cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
-              proident, sunt in culpa qui officia deserunt mollit anim id est laborum.Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-              tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-              quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-              consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
-              cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
-              proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+              TOP NEWS is a public news channel in Kosovo. It is owned by Television of Kosovo (RTK; Albanian: Radio Televizioni i Kosov&euml;s) from the year 2012. It main purpose it to serve to its loyal readers the most recent and unbiased news regarding politics, economics, education, sports, showbiz and so on. It was first founded in the late 2000’s and it is going very strong. The TOP NEWS along with its awesome staff work every day in order to produce worth-reading articles, which are updated every day. It is a channel meant to serve the truth to the people and certainly NOT to spoil and encourage drama and unwanted conflict between celebrities, for which this channel is not about. 
+              <img style="width: 60px; height:55px; float:right; margin: 5px;" src="images/foto1.jpg">
+
+               It is located in the capital city of Kosovo, Prishtina Street Eqrem &Ccedil;abej, 115 Bulevardi Bill Klinton, Prishtin&euml; 10000.When first was established in the late 2000’s, along with their original editors, it began as a newspaper and was considered the official newspaper of Kosovo. But it faced so many hardships; its writers always being chased and threated and the working conditions being not ideal. But what kept this going was the impact that we were having at the people. With the advancement of technology after the year 2015 this channel went online.  It was a bold and risky to say the least, move because it was a new concept and not everyone were accepting this because the low quality of computers which could harm the eyes if it was stared for too long at the monitor was considered an issue. 
 
 
           </div>
@@ -131,20 +124,21 @@
   <article>
       <div class="container">
           <div class="wrapper">
-            <img src="images/foto3.jpg">
+            <img src="images/meetUs.jpg">
 
-            <p>Erblin Halabaku, nje student i Shkencave Kompjuterike, Departamenti i Matematikes ne Prishtine<span id="dots">...</span>
+            <p>Erblin Halabaku CEO of the channel TOP NEWS, is an aspiring programmer who has finished his degree in Computer Science. His interest is expanding this platform making it international.  <span id="dots">...</span>
 
             <span id="more">
-              shteti i Kosoves. Ka synim qe te merr pjese ne <abbr title="Innovation Center of Kosovo"><strong><u>ICK</u></strong></abbr> <i>Prishtine</i>. 
+              His other job is as an Web Developer in  <abbr title="Innovation Center of Kosovo"><strong><u>ICK</u></strong></abbr> <i>Prishtine</i>, where he can expand his knowledge and skill to the TOP NEWS channel as well.
+              He has a good grasp on different programming skills such as:
               <ul id="mora">
-                <li style="list-style-type:disc;">Web Programin
+                <li style="color: #626f85; list-style-type:disc;">Web Programin
                   <ul>
-                    <li style="list-style-type:square;">HTML5</li>
-                    <li style="list-style-type:square;">CSS3</li>
+                    <li style="color: #626f85; list-style-type:square;">HTML5</li>
+                    <li style="color: #626f85; list-style-type:square;">CSS3</li>
                   </ul>
                 </li>
-                <li style="list-style-type:disc;">blini</li>
+                <li style="color: #626f85; list-style-type:disc;">JAVA</li>
               </ul>
             </span></p>
 
@@ -153,35 +147,34 @@
 
 
           <div class="wrapper">
-            <img src="images/foto3.jpg">
+            <img src="images/meetUs.jpg">
 
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus imperdiet, nulla et dictum interdum, nisi lorem egestas vitae scel<span id="dots2">...</span>
+            <p>Ardita Berisha is a managing Director here at the TOP NEWS channel with great perspective and bright future ahead. Besides her regular job she has a passion for Computer Science.<span id="dots2">...</span>
 
             <span id="more2">
-              erisque 
-              
-            ae dui eget tellus gravida venenatis. Integer fringilla congue eros non fermentum. Sed dapibus pulvinar nibh tempor porta.
-            <br>Ka njohuri te mira ne <br>
+          She intends to expand her career by not always working in this channel but expanding her professional career into the world of programming.
+            <br>Her passion ss materialized into learning programing such as<br>
               <ol id="mora2">
-                <li>HTML</li>
-                <li>CSS</li>
+                <li style="color: #626f85;">HTML</li>
+                <li style="color: #626f85;">CSS</li>
               </ol>
+
           </span></p>
 
             <button onclick="myFunction2()" id="myBtn2">Read more</button>
           </div>
 
           <div class="wrapper">
-            <img src="images/foto3.jpg">
+            <img src="images/meetUs.jpg">
 
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus imperdiet, nulla et dictum interdum, nisi lorem egestas vitae scel<span id="dots3">...</span>
+            <p>Nera Hashani works as at the news channel with an enormous determination to get the job done and not leaving everything in the last minute <span id="dots3">...</span>
 
-            <span id="more3">erisque enim ligula venenatis dolor. Maecenas nisl est, ultrices nec congue eget, auctor vitae massa. Fusce luctus vestibulum augue ut aliquet.
+            <span id="more3">What really stands in her quirky personality is her desire to learn more and expand her professional life.She is already on her way to become a great Web Developer and to make a mark in the world. 
 
               <dl id="mora3">
-                <dt>Njohurit</dt>
-                <dd>HTML</dd>
-                <dd>CSS3</dd>
+                <dt style="color: #626f85;">She has already great grasp on pragraming on web such as</dt>
+                <dd style="color: #626f85;">HTML</dd>
+                <dd style="color: #626f85;">CSS3</dd>
               </dl>
 
             </span></p>
@@ -193,7 +186,7 @@
       <address>
         Written by <a href="mailto:erblin.halabaku@gmail.com"><mark>Erblin Halabaku</mark></a>.<br> 
         Visit us at:<br>
-        Konvikti I
+        Street Eqrem &Ccedil;abej, 115 Bulevardi Bill Klinton, Prishtin&euml; 10000
       </address>
   </article>
 
@@ -256,7 +249,7 @@
             }
           }
       </script>
-  <!----Pjesa e pershkrimit te stazhit fillon-------------------------------------------->
+  <!----Pjesa e pershkrimit te stazhit mbaron-------------------------------------------->
 
   <!----Pjesa interaktive fillon--------------------------------------------------------->
       <div class="poshte" style="margin-top: 4%;">
@@ -274,7 +267,7 @@
           <div class="svg">
 
             <svg style  = "margin-top: -16%; margin-left: 50%; ">
-              <rect x="5" y="5" rx="20" ry="20" width="220" height="240"style="fill:white;stroke:black;stroke-width:5;" />
+              <rect x="1%" y="5" rx="20" ry="20" width="220" height="240"style="fill:white;stroke:black;stroke-width:5;" />
             </svg>
 
             <svg style  = "margin-top: -16%; margin-left: 50%; ">
@@ -311,7 +304,7 @@
                 <button class="btn btn1" onmousedown="levizLarte(), fitore()" onmouseup="levizjeRe(),fitore()" ontouchstart="levizLarte()">UP</button><br>
                 <button class="btn btn1" onmousedown="levizMajtas(),fitore()" onmouseup="levizjeRe(),fitore()" ontouchstart="levizMajtas()">LEFT</button><br>
                 <button class="btn btn1" onmousedown="levizDjathtas(),fitore()" onmouseup="levizjeRe(),fitore()" ontouchstart="levizDjathtas()">RIGHT</button><br>
-                <button class="btn btn1" onmousedown="levizPoshte(),fitore()" onmouseup="clevizjeRe(),fitore()" ontouchstart="levizPoshte()">DOWN</button><br>
+                <button class="btn btn1" onmousedown="levizPoshte(),fitore()" onmouseup="levizjeRe(),fitore()" ontouchstart="levizPoshte()">DOWN</button><br>
               </div>
             </div>
           </div>
@@ -344,7 +337,9 @@
             <div class="companyDetails">
                <h4>COMPANY DETAILS</h4>
                <p>
-                  Lorem ipsum dolor sit <br>amet consectetur, adipisicing elit.<br> Nemo similique reprehenderit ex <br>eveniet obcaecati<br> blanditiis recusandae<br> vitae necessitatibus,<br> aliquid nam et eius commodi<br> tempore quibusdam corrupti <br>eaque ipsum, aspernatur quas!
+                  
+
+                  TOP NEWS is a public newsbr <br> channel in Kosovo. It is owned <br>by Television of Kosovo <br>(RTK; Albanian: Radio Televizioni i Kosovës) <br>from the year 2012. It main <br>purpose it to serve to its loyal readers the most recent and unbiased news regarding <br>politics, economics, education,<br> sports, showbiz and so on. 
                </p>
             </div>
             <div class="blogPosts">

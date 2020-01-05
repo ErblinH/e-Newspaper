@@ -8,7 +8,7 @@ function initGallery(){
     captionText=document.querySelector(".captionHolder .captionText");
     
     captionText.innerText=captionText.innerText+slides[slideIndex].querySelector(".captionText").innerText;
-
+    captionText.className="captionText "+"slideTextFromBottom";
     if(slides.length<2){
         var nextPrevBtns=document.querySelector(".shigjetaMajtas,.shigjetaDjathtas");
         nextPrevBtns.style.display="none";
@@ -86,7 +86,7 @@ function changeBackground(){
     if(time>=18)
     {
        var k= document.getElementsByTagName('html')[0];
-       k.setAttribute('style','background-image:url("images/night.jpg")')
+       k.setAttribute('style','background-image:url("images/stars.jpg")')
     }
     else{var k= document.getElementsByTagName('html')[0];console.log(k)
     k.setAttribute('style','background-image:url("#")')}
