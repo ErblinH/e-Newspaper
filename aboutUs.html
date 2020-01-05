@@ -31,7 +31,7 @@
 </head>
 
 <body onload="startGame(), ok()">
-
+<aside>
   <div id="container2">  
     <canvas id="gameCanvas" width="70" height="70"></canvas>
     <canvas id="gameCanvas2" width="70" height="70"></canvas>
@@ -49,16 +49,17 @@
     <canvas id="gameCanvas11" width="70" height="70"></canvas>
     <canvas id="gameCanvas12" width="70" height="70"></canvas>
 </div>
+</aside>
    
   <!----Pjesa e headerit fillimi--------------------------------------------------------->
 
     <header>
           <nav id="mainMenu">
               <ul>
-                    <li><a href="#">Sign Up</a></li>
-                    <li><a href="#">Login</a></li>
-                    <li><a href="#">RSS Feeds</a></li>
-                    <li><a href="#">Archived News</a></li>
+                    <li><a href="signUp.html" target="_blank">Sign Up</a></li>
+                    <li><a href="logIn.html" target="_blank">Login</a></li>
+                    
+                    <li><a href="articles.html" target="_blank">Archived News</a></li>
                  </ul>
               <div class="logos">
                 <a href="https://www.linkedin.com/"><img src="images/in.png" width="20px" height="20px"/></a>
@@ -348,9 +349,9 @@
       <div class="blogPosts">
         <h4>LATEST BLOG POSTS</h4>
           <ul>
-            <li><a href=""><img src="images/vegans.jpg" width="50px" /><p>Vegans 'need to be aware of B12 deficiency risk'</p></a></li>
-            <li><a href=""><img src="images/facial.jpg" width="50px" /><p>Facial recognition fails on race, government study says</p></a></li>
-            <li><a href=""><img src="images/old.jpg" width="50px" /><p>The Older You Are, the Less Narcissistic You Tend to Be</p></a></li>
+            <li><a href="health.html"><img src="images/vegans.jpg" width="50px" /><p>Vegans 'need to be aware of B12 deficiency risk'</p></a></li>
+            <li><a href="technology.html"><img src="images/facial.jpg" width="50px" /><p>Facial recognition fails on race, government study says</p></a></li>
+            <li><a href="health.html"><img src="images/old.jpg" width="50px" /><p>The Older You Are, the Less Narcissistic You Tend to Be</p></a></li>
           </ul>
       </div>
 
@@ -502,8 +503,8 @@
           c.moveTo(217-350,274-350);c.lineTo(317-350,288-350);c.lineTo(342-350,198-350);
           c.stroke();
         }
-
-        for(var i =0;i<5;i++){draw();}  
+var i=0;
+        while(i<5){draw();i++}  
         } 
 
         omg(a); omg(b); omg(c); omg(d); omg(f); omg(e); omg(g); omg(h); omg(i);
