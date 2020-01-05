@@ -1,221 +1,403 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-	<title>Contact Us</title>
+   <meta charset="utf-8">
+   <title>Contact us</title>
+   <link rel="stylesheet" href="reset.css" />
+   <link rel="stylesheet" href="main.css" /> 
+   <style >
+    .error {
+    box-shadow: 0 0 5px #FF5252;
+    border-color: #FF1744;
+}
+  </style>
+   
+   <script src="data.js"></script>
+   <script src="functions.js"></script>
+   
+   
 </head>
 <body>
-	<form method="get" action="" id="mainForm" autocomplete="on">
-   <fieldset>
-      <legend>Contact Us</legend>
-      <table>
-         <tr>
-            <td >
-               <p>
-               <label>Name</label><br/>
-               <input type="text" name="name" id="name" class="required hilightable" placeholder="Firstname" required autofocus> 
-               </p></td>
-               <td>
-               <p>
-               <label>Lastname</label><br/>
-               <input type="text" name="lastname" id="lastname" class="required hilightable" placeholder="Lastname" required >
-               </p>  </td></tr>
-              
-               <tr>
-               	<td colspan="2">
-               <p>
-               <label>Email</label><br/>
-               <input type="email" name="email" id="email" placeholder="ex@example.com" class="required hilightable" required>
-               </p>               
-            	</td>
-         </tr>
-          <tr><td>
-               <p>
-               <label>Password</label><br/>
-               <input type="password" name="pass1" id="pass1" minlength="8" placeholder="8 characters minimum" class="required hilightable" required>
-               </p>               
-            	</td>
+   
+   
+    <header>
+        <nav id="mainMenu">
+            <ul>
+                  <li><a href="#">Sign Up</a></li>
+                  <li><a href="#">Login</a></li>
+                  <li><a href="#">RSS Feeds</a></li>
+                  <li><a href="#">Archived News</a></li>
+               </ul>
+            <div class="logos">
+              <a href="https://www.linkedin.com/"><img src="images/in.png" width="20px" height="20px"/></a>
+              <a href="https://twitter.com/"><img src="images/twitter.png"width="20px"  height="20px"/></a>
+              <a href="https://www.pinterest.com/"><img src="images/pinteres.png" width="20px"  height="20px"/></a>
+              <a href="https://aboutme.google.com/"><img src="images/g+.png" width="20px"  height="20px"/></a>
+              <a href="http://rss.org/"><img src="images/wifi.png" width="20px"  height="20px"/></a>
+            </div>
+            
+        </nav>   
+        <div class="middle">
+            <div class="search">
+                  <input id="submitButton" type="submit" value="SUBMIT"/>
+                  <input id="searchInput" name="search" type="text" placeholder="Search Our Website"/>
+                  
+              </div>
+            <div id="title">
+               <h1>euonymus</h1><p>Free PSD Website Template</p>
+            </div>
+            
+        </div>
+        <nav id="secondaryMenu">
+            <ul>
+                <li><a href="index.html">HOME</a></li>
+                <li><a href="sports.html">SPORTS</a></li>
+                <li><a href="health.html">HEALTH</a></li>
+                <li><a href="technology.html">TECHNOLOGY</a></li>
+                <li><a href="aboutUs.html">ABOUT US</a></li>
+                <li><a href="contactUs.html">CONTACT US</a></li>
+                
+                 
+            </ul>
+        </nav>
+    </header>
+    
+    <article>
+        <section id="bigArticle">
+            <div id="bigArticleUpperPart"></div>
+            
+            <div id="bigArticleTextContent"></div>
+          </section>
+          <section>
+              <table>
+                 <tbody  id="tablebody1">
+                    
+                 </tbody>
+              </table>
+           </section>
+        <form method="post" action="" id="mainForm" autocomplete="on">
+       <fieldset>
+          <legend>Contact Us</legend>
+          <table>
+             <tr>
+                <td >
+                   <p>
+                   <label>Name</label><br/>
+                   <input type="text" name="name" id="name" class="required hilightable" placeholder="Firstname"  autofocus> 
+                   </p></td>
+                   <td>
+                   <p>
+                   <label>Lastname</label><br/>
+                   <input type="text" name="lastname" id="lastname" class="required hilightable" placeholder="Lastname" >
+                   </p>  </td></tr>
+                  
+                   <tr>
+                       <td colspan="2">
+                   <p>
+                   <label>Email</label><br/>
+                   <input type="text" name="mail" id="mail" placeholder="ex@example.com" class="required hilightable">
+                   </p>               
+                    </td>
+             </tr>
+              <tr><td>
+                   <p>
+                   <label>Password</label><br/>
+                   <input type="password" name="pass1" id="pass1" minlength="8" placeholder="8 characters minimum" class="required hilightable" >
+                    
+                    </p>             
+                    </td>
+             
+              <td>
+                   <p>
+                   <label>Confirm your password</label><br/>
+                   <input type="password" name="pass2" id="pass2" placeholder="Retype your password" class="required hilightable" >
+                   Encryption: <keygen name="secure">  
+                </p>               
+                    </td>
+             </tr>
+             <tr>
+                 <td colspan="2">
+                     <label>Sex: 
+                    <input name="sex" type="radio" id="male" value="M" checked> M
+                    <input name="sex" type="radio" id="female" value="F" > F
+                </label>
+                
+                 </td>
+    
+             </tr>
+             <tr>
+                        <td colspan="2">
+                   <p>
+                   <label>Username</label><br/>
+                   <input type="username" name="username" id="username" placeholder="username" class="required hilightable" >
+                   </p>               
+                    </td>
+                  <td style="background-image: radial-gradient(rgb(223, 183, 183) 15%, rgb(207, 207, 151) 25%, rgb(152, 236, 156) 60%);">
+                    <label>Multiply numbers</label>
+                    <input type="text" name="firstnumber" id="firstnumber" placeholder="First number">
+                    <input type="text" name="secondnumber" id="secondnumber" placeholder="Second number">
+                    <input type="button" value="Multiply" name="multiply" id="multiply" onclick="shumezo()">
+                    <p id="p01"></p>
+                  </td>
+                     </tr>
+              <tr><td colspan="2">
+                   <p>
+                   <label>Rate Us</label><br><br>
+                   <input type="rating" name="rating" id="rating" class="hilightable" placeholder="Digit: 1 - 10" >
+                   </p>    
+                   <p id="demo"></p>        
+                    </td>
+                    <td>
+                    <label>Type the radius to find circle area</label>
+                    <input type="number" name="radius" id="radius" placeholder="Radius" min="0">
+                    <input type="button" value="Area of a circle" name="area" id="area" onclick="calculate()">
+                    <p id="demo2"></p>
+                  </td>
+             </tr>
+             <tr>
+                 <td colspan="2">
+                     <p>
+                        <label>How satisfied are you with our page?</label><br><br>
+                    <select name="list1">
+                        <option selected>Very satisfied</option>
+                        <option>Average</option>
+                        <option>I did not enjoy it</option>
+                    </select>
+                </p>
+                 </td>
+             </tr>
+             <tr>
+                 <td colspan="2" style="background-image: linear-gradient(rgb(218, 214, 196), rgb(228, 228, 140), rgb(137, 226, 137));">
+                     
+                      <label>What should we change?</label><br><br>
+                      <label>
+                    <input name="chb" type="checkbox" value="1" checked> Design</label>
+                        <br>
+                <label>	
+                    <input name="chb" type="checkbox" value="2"> UX
+                </label><br>
+                <label>
+                    <input name="chb" type="checkbox" value="ch3"> All of the above
+                </label>
+                     
+                 </td>
+             </tr>
+             <tr>
+                 <td >
+                     <label for="date">Submiting date:
+                            <input type="date" name="date" min="2019-04-01">
+                  </label>
+                 </td>
+                 <td>
+                     <label>
+                         <input type="button" value="Today's date" id="nowButton" onclick="printoTani()">
+                     </label>
+                 </td>
+             </tr>
+     
+             <tr>
+                <td colspan="2" rowspan="2">
+                   <div class="rectangle centered"> 
+    
+                      <input type="submit" id="valid" value="Submit">
+                       <input type="reset" value="Clear Form" class="btn">      
+                   </div>
+                
+             
+             
+                 
+                     <p id="text">
+                     Thank you for your time Sir </p>
+                     <label>
+                         <input type="button" value="Change the text above" id="change" onclick="ndrysho()">
+                     </label>
+                 </td>
+             </tr>
+          </table>
+       </fieldset>
+    </form>
+    <output form="mainForm" name="output" for="name lastname"></output>
+    </article>
+<footer>
+
+    <div align="center" id="uparrow">
+      <a href="#mainMenu"><img src="images/uparrow.png" width="40px"/></a>
+    </div>
+       
+    <div class="upDownFooter">
          
-          <td>
-               <p>
-               <label>Confirm your password</label><br/>
-               <input type="password" name="pass2" id="pass2" placeholder="Retype your password" class="required hilightable" required>
-               </p>               
-            	</td>
-         </tr>
-         <tr>
-         	<td colspan="2">
-         		<label>Sex: 
-                <input name="sex" type="radio" id="male" value="M" checked> M
-                <input name="sex" type="radio" id="female" value="F" > F
-            </label>
-			
-         	</td>
+      <div class="companyDetails">
+        <h4>COMPANY DETAILS</h4>
+        <p>
+                  
 
-         </tr>
-         <tr>
-                	<td colspan="2">
-               <p>
-               <label>Username</label><br/>
-               <input type="username" name="username" id="username" placeholder="username" class="required hilightable" >
-               </p>               
-            	</td>
-         		</tr>
-          <tr><td colspan="2">
-               <p>
-               <label>Rate Us</label><br><br>
-               <input type="rating" name="rating" id="rating" class="hilightable" placeholder="Digit: 1 - 10" required >
-               </p>    
-               <p id="demo"></p>        
-            	</td>
-         </tr>
-         <tr>
-         	<td colspan="2">
-         		<p>
-         		   <label>How satisfied are you with our page?</label><br><br>
-                <select name="list1">
-                    <option selected>Very satisfied</option>
-                    <option>Average</option>
-                    <option>I did not enjoy it</option>
-                </select>
-            </p>
-         	</td>
-         </tr>
-         <tr>
-         	<td colspan="2">
-         		
-         		 <label>What should we change?</label><br><br>
-         		 <label>
-                <input name="chb" type="checkbox" value="1" checked> Design</label>
-           		 <br>
-            <label>	
-                <input name="chb" type="checkbox" value="2"> UX
-            </label><br>
-            <label>
-                <input name="chb" type="checkbox" value="ch3"> All of the above
-            </label>
-         		
-         	</td>
-         </tr>
-         <tr>
-         	<td >
-         		<label for="date">Submiting date:
-   					 <input type="date" name="date" min="2019-04-01">
-  			</label>
-         	</td>
-         	<td>
-         		<label>
-         			<input type="button" value="Today's date" id="nowButton" onclick="fillimi()">
-         		</label>
-         	</td>
-         </tr>
+          TOP NEWS is a public newsbr <br> channel in Kosovo. It is owned <br>by Television of Kosovo <br>(RTK; Albanian: Radio Televizioni i Kosovës) <br>from the year 2012. It main <br>purpose it to serve to its loyal readers the most recent and unbiased news regarding <br>politics, economics, education,<br> sports, showbiz and so on. 
+       </p>
+      </div>
+
+      <div class="blogPosts">
+        <h4>LATEST BLOG POSTS</h4>
+          <ul>
+            <li><a href=""><img src="images/vegans.jpg" width="50px" /><p>Vegans 'need to be aware of B12 deficiency risk'</p></a></li>
+            <li><a href=""><img src="images/facial.jpg" width="50px" /><p>Facial recognition fails on race, government study says</p></a></li>
+            <li><a href=""><img src="images/old.jpg" width="50px" /><p>The Older You Are, the Less Narcissistic You Tend to Be</p></a></li>
+          </ul>
+      </div>
+
+      <div class="quickLinks">
+        <h4>QUICK LINKS</h4>
+          <ul>
+            <li><a href="sports.html">Liverpool hopeful over Van Dijk return for Club World Cup final</a></li>
+             <li><a href="health.html">Vegans 'need to be aware of B12 deficiency risk'</a></li>
+              <li><a href="technology.html">Uber promises changes to avoid Germany ban</a></li>
+              <li><a href="sports.html">Brazilian Mikaili Sol wins Kiteboarding World Championships</a></li>
+              <li><a href="technology.html">YouTube's top earners: Eight-year-old Ryan tops list with $26m</a></li>
+          </ul>
+      </div>
+                    
+      <div class="contact">
+        <h4>CONTACT US</h4>
+            <input type="text" placeholder="Name"/><br>
+            <input type="email" placeholder="Email" cols="21"/><br>
+            <textarea  rows="5"> Message</textarea><br>
+            <input type="submit" value="SUBMIT"/>
+      </div> 
+    </div>
+
+      <p id="copyright">Copyright &copy; 2013 Domain Name-Al Rights Reserved </p>
+      <p id="template">Template by OS Templates</p>          
+  </footer>
+  <!------------------------------------------------------------------------>
+
+  <script src="data.js" type="text/JavaScript"></script>
  
-         <tr>
-            <td colspan="2">
-               <div class="rectangle centered"> 
+  <script src="functions.js" type="text/JavaScript"></script>
 
-                  <button type="button" id="valid" onclick=" myFunction() , validatePassword(), matchMethod()">Submit</button>
-                   <input type="reset" value="Clear Form" class="btn">      
-               </div>
-            </td>
-         </tr>
-         <tr>
-         	<td>
-         		<p id="text">
-         		Thank you for your time Sir </p>
-         		<label>
-         			<input type="button" value="Change the above text" id="change" onclick="replaceMethod()">
-         		</label>
-         	</td>
-         </tr>
-      </table>
-   </fieldset>
-</form>
+  <div id="geolocation">
+    <script src="index.js" type="text/JavaScript"></script>
+  </div>
 
-<!--Javascript-->
-<script>
+  <script>
+  
 	//Perdorimi i metodes toString()
 	//Perdorimi i objektit Date
 function fillimi(){
-    document.getElementById("nowButton").addEventListener("click",printoTani,false);}
+    document.getElementById("nowButton").addEventListener("click",printoTani,false);
+  }
+
     function printoTani(){
     var tani=new Date();
     window.alert("Time and date \n" +tani.toString());
-}
-//Perdorimi i metodes MAX_VALUE()
-function multiply(x, y) {
-  if (x * y > Number.MAX_VALUE) {
-    return ("Process as Infinity");
-  }
-  return (x * y);
-}
-//Perdorimi i metodes MIN_VALUE()
-function multiply2(x, y) {
-  if (x * y < Number.MIN_VALUE) {
-    return "Process as -Infinity";
-  }
-  return (x * y);
-}
-	//Perdorimi i metodes toExponential()
-function expo(x, f) {
-  return Number.parseFloat(x).toExponential(f);
-}
-//Perdorimi i metodes match() dhe modifikuesit 'g'/*
-/*function matchMethod(){
-var name = document.getElementById("name").value;
-var regex = /[A-Z]/g;
-var found = name.match(regex);
-if (found === undefined || found.length == 0) {
-    window.alert("Capitalise a letter")
-}
-}*/
+    }
+//Perdorimi i metodes match() dhe perdorimi i RegEx / gi
+    function specialChars(){
+      var teksti = document.getElementById("username").value;
+      var special = /[ !@#$%^&*()_+\-=\[\]{};':"\\|,.<>\/?]/gi;
+      var res = teksti.match(special);
+      if(res != null){
+           var teksti2 = document.getElementsByName("username")[0];
+           teksti2.value='';
+           teksti2.placeholder='No special character';
+           teksti2.classList.add("error");
+           return false;
+      }
+      return true;
+    }
 
-    function change(){
-    var name = document.getElementById("name").value;
-	var regex = /[A-Z]/g;
-	var found = name.match(regex);
-	if (found === undefined || found.length == 0) {
-    window.alert("Capitalise a letter")
-}
-}
-/*
-function regEx2(){
+//Perdorimi i try-catch dhe definimi i gabimit permes Throw, perdorimi i metodes toExponential(), perdorimi i konstantes MAX_VALUE,
+// parseFloat,Math.max(), Math.floor, Math.sqrt()
+function multiply(){
+    document.getElementById("multiply").addEventListener("click",shumezo,false);}
+function shumezo(){
+  var first = document.getElementById("firstnumber").value;
+  var second = document.getElementById("secondnumber").value;
 
+  try {
+    if(isNaN(first) || isNaN(second)) throw "not a number";
+    else{
+       a = Number(first);
+       b = Number(second);
+       if (a * b > Number.MAX_VALUE) {
+       document.getElementById("p01").innerHTML = "Process as infinity"
+      }
+
+      else{
+      document.getElementById("p01").innerHTML ="The result is: " +(a * b) + ", to exponential: "+ Number.parseFloat(a*b).toExponential(3)+"<br> The largest of two numbers is: "+ Math.max(a,b)+"<br> The lower bound of result is: "+Math.floor(a*b)+"<br>The square root of "+(a*b)+" is "+Math.sqrt(a*b).toPrecision(4)+"<br> The square root of two is: "+Math.SQRT2.toPrecision(4);;
+      }
+    }
+
+    }
+    catch(err) {
+    document.getElementById("p01").innerHTML = "Input is "+ err;
+  }
+}
+//Perdorimi i prototipeve, metodes Math.pow(), konstantes Math.PI, metodes toPrecision(), perdorimi i konstruktorit Number
+function siperfaqja(){
+    document.getElementById("area").addEventListener("click",calculate,false);
+  }
+  Number.prototype.circleArea = function() {
+  return (Math.pow(this.valueOf(),2)*Math.PI);
+};
+function calculate() {
+  var num = parseInt(document.getElementById("radius").value, 10);
+  var rrethi = num.circleArea()
+  var numri = rrethi.toPrecision(4);
+  console.log(numri);
+ // var n = parseInt(numri, 10)
  
-    //var text = document.getElementById("text");
-    //var regex2 = /[Sir]/i;
-     document.getElementById("text").innerHTML = text.replace("Sir", "Madam");
-
-  } 
+  document.getElementById("demo2").innerHTML = "Area of the circle with radius " + num+" is: "+numri+"<br>"+numri.whoAmI();
 }
+Object.prototype.whoAmI = function(){
+    return "The result is an object";
 }
+//Perdorimi i konstantes Number.EPSILON, metodes Math.abs 
+function eps(){
+var result = Math.abs(0.2 - 0.3 +0.1);
 
 
 
-	//Validimi i rangut te vlerave te fushes Rating
-	//Perdorimi  i metodes isNaN()
-function replaceMethod {
-  var str = document.getElementById("text").innerHTML; 
-  var res = str.replace("Sir", "Madam");
-  document.getElementById("text").innerHTML = res;
-}*/
+console.log(result);
+
+console.log(result < Number.EPSILON);}
+//Perdorimi i metodes replace() te stringjet
 function replaceMethod(){
     document.getElementById("change").addEventListener("click",ndrysho,false);}
     function ndrysho(){
       var str = document.getElementById("text").innerHTML; 
-  var res = str.replace("Sir", "Madam");
+      var res = str.replace("Sir", "Madam");
   document.getElementById("text").innerHTML = res;
 }
+//Perdorimi i metodes isNaN() dhe funksioni per validim te te dhenave(rangu i vlerave te RateUs vetem nga 1-10)
 function myFunction() {
   var x, text;
 
   x = document.getElementById("rating").value;
 
   if (isNaN(x) || x < 1 || x > 10) {//metoda isNaN()
-     var email = document.getElementsByName("rating")[0];
+    var email = document.getElementsByName("rating")[0];
    	email.value='';
     email.placeholder='Invalid input.(1-10)';
+    email.classList.add("error");
+    return true;
   } 
+  return false;
 
+}
+//Validimi i email, perdorimi i metodes test() regex
+
+function validateEmail() 
+{
+  var mail = document.getElementById("mail").value;
+ if (!(/^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/.test(mail)))
+  {
+    var element = document.getElementsByName("mail")[0];
+    element.value='';
+    element.placeholder='Invalid email address';
+    element.classList.add("error");
+    return true;
+  }
+    
+    return (false);
 }
 	//Validimi se a pershtaten password dhe confirmaton password
   var password = document.getElementById("pass1")
@@ -224,23 +406,110 @@ function myFunction() {
 function validatePassword(){
   if(password.value != confirm_password.value) {
     confirm_password.setCustomValidity("Passwords Don't Match");
+   return false;
   } else {
     confirm_password.setCustomValidity('');
+    return true;
   }
 }
 
 password.onchange = validatePassword;
 confirm_password.onkeyup = validatePassword;
 
-/* //Validimi i fushes se zbrazet
- function isEmpty{
- 	var username = document.getElementById("username").value;
- 	if(username == ""){
- 		var user = document.getElementsByName("username")[0];
- 		user.placeholder='Required field';
- 	}
+ //Validimi i nje strongPassword perdorimi i regEx metoda exec(), paswwordi duhet te permbaj numer, shkronje, karakter, min. 8 gjatesia
+ function strongPassword(){
+  var passwordi = document.getElementById("pass1").value;
+  var parametri = /^(?=.*[A-Za-z])(?=.*\d)(?=.*[$@$!%* #+=\(\)\^?&])[A-Za-z\d$@$!%* #+=\(\)\^?&]{3,}$/g;
+  var vargu = parametri.exec(passwordi);
+  if(vargu == null){
+    var pasi = document.getElementsByName("pass1")[0];
+    var pasi2 = document.getElementsByName("pass2")[0];
+    pasi.value = '';
+    pasi2.value ='';
+    pasi.placeholder='Weak Password'
+    pasi2.placeholder='Weak Password';
+    pasi.classList.add("error");
+    return true;
+  }
+  return false;
+ }
+ //Validim nese nje fushe eshte e zbrazet ose jo
+function isBlank(inputField)
+{
+    if(inputField.value==""){
+        return true;
+    }
+    return false;
+}
 
- }*/
-</script>
+
+//pastrimi i fushave te formes nga gabimet
+function makeClean(element)
+{
+    element.classList.remove("error");
+}
+window.addEventListener("load", function(){
+    
+    //i shtojme "pergjuesit" per klasen highlightable
+    var highlightableInputs = document.querySelectorAll(".highlight");
+    for (var i =0; i <highlightableInputs.length; i++)
+    {
+        highlightableInputs[i].addEventListener("focus",function(e){
+            e.target.classList.toggle("highlight");
+        });
+        highlightableInputs[i].addEventListener("blur",function(e){
+            e.target.classList.toggle("highlight");
+        });
+    }
+    //i shtojme pergjuesit per selektoret klase "required"
+    var requiredInputs = document.querySelectorAll(".required");
+    for (var i =0; i<requiredInputs.length; i++)
+    {
+        requiredInputs[i].addEventListener("change", function(e){
+            makeClean(e.target);
+        });
+    }
+    
+    //kur te bejme submit formen, "empty" checks kerkohet te plotesohen ne input fushat qe jane required
+    var mainForm = document.getElementById("mainForm");
+    mainForm.addEventListener("submit", function(e){
+    
+    var requiredInputs = document.querySelectorAll(".required");
+    for (var i =0; i<requiredInputs.length; i++)
+    {
+        if(isBlank(requiredInputs[i]))
+        {
+            e.preventDefault();
+            requiredInputs[i].classList.add("error");
+        }
+        else
+        {
+            makeClean(requiredInputs[i]);
+        }
+    }
+
+      if(validatePassword()){
+          e.preventDefault();
+          validatePassword();
+      }
+      if(specialChars()){
+        e.preventDefault()
+        specialChars();
+      }
+      if(myFunction()){
+         e.preventDefault();
+         myFunction(); 
+
+      }
+      if(validateEmail()){
+        e.preventDefault();
+        validateEmail() ;
+      }
+      if(strongPassword()){
+        e.preventDefault();
+        strongPassword();
+      }
+    });
+})</script>
 </body>
 </html>

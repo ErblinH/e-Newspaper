@@ -30,11 +30,17 @@ article
     height: 175px;
     margin: 0 auto;
 }
+<<<<<<< HEAD
 
 .blini {
     margin: 0 auto;
 }
 
+=======
+
+
+
+>>>>>>> 38eaaee87c3039493b80520cf21708d1f7380e3a
 .artikulli ul li img {
     width: 48px;
     height: 48px;
@@ -182,7 +188,7 @@ body{
 }
 p{
     
-    font-size:12px;
+    font-size:11px;
     
 }
 a
@@ -353,7 +359,11 @@ a
         text-decoration: underline;
     }
     nav#secondaryMenu ul li a:active{
+<<<<<<< HEAD
         color: blue;
+=======
+        color: #9c9c9c;
+>>>>>>> 38eaaee87c3039493b80520cf21708d1f7380e3a
         text-decoration: underline;
     
     }
@@ -401,7 +411,7 @@ a
         display: inline-block;
         vertical-align: text-top;  
         margin-right: 20px;
-        width: 19%;
+        width: 18.5%;
         padding: 10px;
     }
     footer div.upDownFooter div input[type=submit]
@@ -562,6 +572,7 @@ article section a:link {
     text-decoration: none;
 }
 
+<<<<<<< HEAD
 
 article section a:hover{
     color: rgb(100, 39, 136);
@@ -586,3 +597,16 @@ table.meet .meetArticle .meetDes{
 table.meet .meetArticle .meetDes p, h2 {
     margin-left: 5%;
 }
+=======
+
+article section a:hover{
+    color: rgb(100, 39, 136);
+    text-decoration: underline;
+}
+article section a:active{
+    color: blue;
+    text-decoration: underline;
+
+}
+/*BODY PART ENDS HERE*/
+>>>>>>> 38eaaee87c3039493b80520cf21708d1f7380e3a
